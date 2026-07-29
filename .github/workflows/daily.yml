@@ -96,4 +96,4 @@ jobs:
           - [ ] Secrets 설정 확인 (ANTHROPIC_API_KEY, AZURE_*, IG_*)
           - [ ] published.json 파일 상태 확인
           - [ ] 로그에서 오류 메시지 확인" \
-            --label "bug,automated"
+            --label "bug"
