@@ -813,12 +813,13 @@ def main() -> None:
         print(f"  슬라이드: {len(final_paths)}장")
         print("=" * 60)
 
-        # Mac 알림
-        import subprocess
-        subprocess.run([
-            "osascript", "-e",
-            f'display notification "📸 {topic} 카드가 Instagram에 발행됐어요! (게시물 ID: {post_id})" with title "개념카드 에이전트 ✅" sound name "Glass"'
-        ], check=False)
+        # Mac 알림 (macOS에서만 실행)
+        import sys, subprocess
+        if sys.platform == "darwin":
+            subprocess.run([
+                "osascript", "-e",
+                f'display notification "📸 {topic} 카드가 Instagram에 발행됐어요! (게시물 ID: {post_id})" with title "개념카드 에이전트 ✅" sound name "Glass"'
+            ], check=False)
 
     except KeyboardInterrupt:
         print("\n[중단] 사용자에 의해 중단되었습니다.")
