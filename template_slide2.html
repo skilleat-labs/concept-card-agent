@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1080px;
+      height: 1080px;
+      overflow: hidden;
+      font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+      background: #1A1A35;
+    }
+    .card {
+      width: 1080px;
+      height: 1080px;
+      background: #1A1A35;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ── 헤더 ── */
+    .header {
+      background: #12122A;
+      padding: 20px 48px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid rgba(123,158,255,0.12);
+    }
+    .header-left { display: flex; align-items: center; gap: 12px; }
+    .category-chip {
+      font-size: 14px;
+      font-weight: 700;
+      color: #7B9EFF;
+      background: rgba(43,79,232,0.2);
+      border: 1px solid rgba(43,79,232,0.4);
+      border-radius: 5px;
+      padding: 4px 14px;
+      letter-spacing: 0.04em;
+    }
+    .header-title {
+      font-size: 18px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.4);
+    }
+    .slide-dots { display: flex; gap: 7px; align-items: center; }
+    .dot { width: 8px; height: 8px; border-radius: 50%; background: rgba(255,255,255,0.18); }
+    .dot.active { background: #7B9EFF; width: 22px; border-radius: 4px; }
+
+    /* ── 본문 전체 래퍼 (세로 중앙 정렬) ── */
+    .body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 0 52px;
+      gap: 22px;
+    }
+
+    /* ── 개념 설명 블록 ── */
+    .concept-block {}
+    .concept-title {
+      font-size: 72px;
+      font-weight: 900;
+      color: #FFFFFF;
+      letter-spacing: -0.04em;
+      line-height: 1.0;
+      margin-bottom: 14px;
+    }
+    .concept-summary {
+      font-size: 24px;
+      font-weight: 500;
+      color: rgba(255,255,255,0.65);
+      line-height: 1.6;
+      word-break: keep-all;
+    }
+
+    /* ── 구분선 ── */
+    .divider {
+      height: 1px;
+      background: rgba(123,158,255,0.15);
+      flex-shrink: 0;
+    }
+
+    /* ── 다이어그램 ── */
+    .diagram-area {
+      flex-shrink: 0;
+      height: 310px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .diagram-area svg {
+      width: 992px;
+      height: 310px;
+      display: block;
+    }
+
+    /* ── 정의 밴드 ── */
+    .definition-row {
+      background: #2B4FE8;
+      border-radius: 14px;
+      padding: 18px 30px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    .definition-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.45);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      flex-shrink: 0;
+      white-space: nowrap;
+    }
+    .definition-divider {
+      width: 1px; height: 30px;
+      background: rgba(255,255,255,0.2);
+      flex-shrink: 0;
+    }
+    .definition-text {
+      font-size: 22px;
+      font-weight: 700;
+      color: #FFFFFF;
+      line-height: 1.45;
+      word-break: keep-all;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <div class="header-left">
+        <span class="category-chip">{{ category }}</span>
+        <span class="header-title">{{ title }}란 무엇인가?</span>
+      </div>
+      <div class="slide-dots">
+        <div class="dot"></div>
+        <div class="dot active"></div>
+        <div class="dot"></div>
+      </div>
+    </div>
+
+    <div class="body">
+      <div class="concept-block">
+        <div class="concept-title">{{ title }}</div>
+        <div class="concept-summary">{{ summary }}</div>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="diagram-area">
+        {{ diagram_svg }}
+      </div>
+
+      <div class="definition-row">
+        <div class="definition-label">한 줄 정의</div>
+        <div class="definition-divider"></div>
+        <div class="definition-text">{{ definition }}</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

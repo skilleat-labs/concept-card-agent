@@ -1,0 +1,99 @@
+name: Daily Card Publisher
+
+on:
+  schedule:
+    # KST 09:00 = UTC 00:00
+    - cron: '0 0 * * *'
+
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: '발행할 주제 (비워두면 AI가 자동 선택)'
+        required: false
+        type: string
+        default: ''
+
+jobs:
+  publish-card:
+    runs-on: ubuntu-latest
+
+    permissions:
+      contents: write   # published.json 커밋용
+      issues: write     # 실패 시 이슈 생성용
+
+    env:
+      ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+      AZURE_STORAGE_CONNECTION_STRING: ${{ secrets.AZURE_STORAGE_CONNECTION_STRING }}
+      AZURE_STORAGE_ACCOUNT: ${{ secrets.AZURE_STORAGE_ACCOUNT }}
+      AZURE_CONTAINER_NAME: ${{ secrets.AZURE_CONTAINER_NAME }}
+      IG_USER_ID: ${{ secrets.IG_USER_ID }}
+      IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Install Playwright Chromium
+        run: |
+          playwright install chromium
+          playwright install-deps chromium
+
+      - name: Run agent (with topic)
+        if: ${{ github.event.inputs.topic != '' }}
+        run: |
+          python agent.py --topic "${{ github.event.inputs.topic }}"
+
+      - name: Run agent (auto select topic)
+        if: ${{ github.event.inputs.topic == '' }}
+        run: |
+          python agent.py
+
+      - name: Commit published.json
+        if: success()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add published.json
+          git diff --cached --quiet || git commit -m "chore: publish card $(date +'%Y-%m-%d') [skip ci]"
+          git push
+
+      - name: Upload PNG artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: card-png-${{ github.run_id }}
+          path: output/*.png
+          retention-days: 30
+
+      - name: Create issue on failure
+        if: failure()
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          gh issue create \
+            --title "카드 발행 실패: $(date +'%Y-%m-%d')" \
+            --body "## 자동 발행 실패
+
+          - **실행 일시**: $(date +'%Y-%m-%d %H:%M:%S UTC')
+          - **워크플로우**: ${{ github.workflow }}
+          - **실행 번호**: ${{ github.run_number }}
+          - **링크**: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+          ## 확인 사항
+          - [ ] Secrets 설정 확인 (ANTHROPIC_API_KEY, AZURE_*, IG_*)
+          - [ ] published.json 파일 상태 확인
+          - [ ] 로그에서 오류 메시지 확인" \
+            --label "bug,automated"

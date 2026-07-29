@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 1080px; height: 1350px; overflow: hidden; font-family: 'Noto Sans KR', sans-serif; }
+
+    .card {
+      position: relative;
+      width: 1080px;
+      height: 1350px;
+      background: #1A1A35;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 72px 72px 80px 72px;
+    }
+
+    /* 배경 원형 패턴 */
+    .bg-circle {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .c1 { width: 700px; height: 700px; top: -200px; right: -200px; border: 1.5px solid rgba(43,79,232,0.3); }
+    .c2 { width: 460px; height: 460px; top: -60px;  right: -40px;  border: 1.5px solid rgba(43,79,232,0.15); }
+    .c3 { width: 900px; height: 900px; bottom: -350px; left: -250px; border: 1.5px solid rgba(43,79,232,0.15); }
+
+    /* 상단 라벨 */
+    .top-label {
+      flex-shrink: 0;
+      font-size: 15px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.35);
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+    }
+
+    /* 중앙 요약 영역 */
+    .summary-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .summary-heading {
+      font-size: 28px;
+      font-weight: 700;
+      color: #2B4FE8;
+      letter-spacing: 0.04em;
+      margin-bottom: 36px;
+    }
+    .summary-text {
+      font-size: 56px;
+      font-weight: 900;
+      color: #ffffff;
+      line-height: 1.25;
+      letter-spacing: -0.02em;
+      word-break: keep-all;
+    }
+
+    /* 하단 해시태그 */
+    .hashtags {
+      flex-shrink: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 48px;
+    }
+    .hashtag {
+      font-size: 19px;
+      font-weight: 700;
+      color: rgba(43,79,232,0.9);
+      background: rgba(43,79,232,0.12);
+      border-radius: 100px;
+      padding: 10px 20px;
+    }
+
+    /* 브랜드 */
+    .brand {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding-top: 32px;
+      border-top: 1px solid rgba(255,255,255,0.1);
+    }
+    .brand-dot {
+      width: 36px; height: 36px;
+      border-radius: 50%;
+      background: rgba(43,79,232,0.5);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .brand-dot::after {
+      content: '';
+      width: 13px; height: 13px;
+      border-radius: 50%;
+      background: #fff;
+    }
+    .brand-text {
+      font-size: 19px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.5);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="bg-circle c1"></div>
+    <div class="bg-circle c2"></div>
+    <div class="bg-circle c3"></div>
+
+    <div class="top-label">오늘의 핵심 요약</div>
+
+    <div class="summary-area">
+      <div class="summary-heading">기억할 한 줄</div>
+      <div class="summary-text">{{ summary }}</div>
+    </div>
+
+    <div class="hashtags">
+      {% for tag in hashtags %}
+      <span class="hashtag">{{ tag }}</span>
+      {% endfor %}
+    </div>
+
+    <div class="brand">
+      <div class="brand-dot"></div>
+      <span class="brand-text">AI 개념카드 · 직장인 Copilot 시리즈</span>
+    </div>
+  </div>
+</body>
+</html>

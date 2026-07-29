@@ -1,0 +1,19 @@
+# 환경변수 (절대 커밋 금지)
+.env
+
+# 생성된 이미지
+output/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# macOS
+.DS_Store
+
+# 로그
+logs/
+*.log

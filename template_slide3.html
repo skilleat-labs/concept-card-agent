@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body {
+      width: 1080px;
+      height: 1080px;
+      overflow: hidden;
+      font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif;
+      background: #F5F6FA;
+    }
+    .card {
+      width: 1080px;
+      height: 1080px;
+      background: #F5F6FA;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    /* ── 헤더 ── */
+    .header {
+      background: #1A1A35;
+      padding: 26px 52px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header-left {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+    }
+    .category-chip {
+      font-size: 13px;
+      font-weight: 700;
+      color: #7B9EFF;
+      background: rgba(43,79,232,0.2);
+      border: 1px solid rgba(43,79,232,0.4);
+      border-radius: 5px;
+      padding: 3px 12px;
+      letter-spacing: 0.05em;
+    }
+    .header-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: #FFFFFF;
+      letter-spacing: -0.02em;
+    }
+    .slide-dots {
+      display: flex;
+      gap: 7px;
+      align-items: center;
+    }
+    .dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+    }
+    .dot.active {
+      background: #7B9EFF;
+      width: 22px;
+      border-radius: 4px;
+    }
+
+    /* ── 스토리 섹션 ── */
+    .story-container {
+      flex: 1;
+      margin: 24px 44px 0 44px;
+      background: #FFFFFF;
+      border-radius: 20px;
+      box-shadow: 0 2px 16px rgba(26,26,53,0.06);
+      padding: 40px 48px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .story-eyebrow {
+      font-size: 12px;
+      font-weight: 700;
+      color: #2B4FE8;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .story-eyebrow::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: #E8EAFF;
+    }
+    .story-text {
+      font-size: 28px;
+      font-weight: 500;
+      color: #1A1A35;
+      line-height: 1.75;
+      word-break: keep-all;
+    }
+    /* 파란 강조 키워드 */
+    .story-text em.blue {
+      color: #2B4FE8;
+      font-style: normal;
+      font-weight: 700;
+    }
+    /* 초록 강조 키워드 */
+    .story-text em.green {
+      color: #2E7D32;
+      font-style: normal;
+      font-weight: 700;
+    }
+    /* 주황 강조 키워드 */
+    .story-text em.orange {
+      color: #E65100;
+      font-style: normal;
+      font-weight: 700;
+    }
+    /* 빨간 강조 키워드 */
+    .story-text em.red {
+      color: #C62828;
+      font-style: normal;
+      font-weight: 700;
+    }
+    /* 인라인 코드 스타일 */
+    .story-text code {
+      background: #EEF2FF;
+      color: #2B4FE8;
+      font-family: 'Noto Sans KR', sans-serif;
+      font-size: 0.9em;
+      font-weight: 700;
+      border-radius: 4px;
+      padding: 1px 8px;
+    }
+
+    /* ── 태그 푸터 ── */
+    .footer {
+      margin: 16px 44px 24px 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    .tag {
+      font-size: 14px;
+      font-weight: 700;
+      color: #2B4FE8;
+      background: rgba(43,79,232,0.08);
+      border-radius: 100px;
+      padding: 4px 14px;
+    }
+    .brand {
+      font-size: 13px;
+      font-weight: 700;
+      color: #8B8FA8;
+      letter-spacing: 0.03em;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="header">
+      <div class="header-left">
+        <span class="category-chip">{{ category }}</span>
+        <span class="header-title">{{ title }}</span>
+      </div>
+      <div class="slide-dots">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot active"></div>
+      </div>
+    </div>
+
+    <div class="story-container">
+      <div class="story-eyebrow">STORY</div>
+      <div class="story-text">{{ story | safe }}</div>
+    </div>
+
+    <div class="footer">
+      <div class="tags">
+        {% for tag in tags %}
+        <span class="tag">{{ tag }}</span>
+        {% endfor %}
+      </div>
+      <span class="brand">infra.card</span>
+    </div>
+  </div>
+</body>
+</html>

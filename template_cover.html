@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 1080px; height: 1350px; overflow: hidden; font-family: 'Noto Sans KR', sans-serif; }
+
+    .card {
+      position: relative;
+      width: 1080px;
+      height: 1350px;
+      background: #2B4FE8;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 72px 72px 80px 72px;
+    }
+
+    /* 배경 원형 패턴 */
+    .bg-circle {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .c1 { width: 860px; height: 860px; top: -220px; right: -260px; border: 1.5px solid rgba(255,255,255,0.1); }
+    .c2 { width: 580px; height: 580px; top: -60px;  right: -80px;  border: 1.5px solid rgba(255,255,255,0.07); }
+    .c3 { width: 1000px; height: 1000px; bottom: -380px; left: -280px; border: 1.5px solid rgba(255,255,255,0.07); }
+    .c4 { width: 440px; height: 440px; bottom: 80px; right: -100px; border: 1.5px solid rgba(255,255,255,0.05); }
+
+    /* 상단 브랜드 */
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-shrink: 0;
+    }
+    .brand-dot {
+      width: 42px; height: 42px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+    }
+    .brand-dot::after {
+      content: '';
+      width: 15px; height: 15px;
+      border-radius: 50%;
+      background: #fff;
+    }
+    .brand-name {
+      font-size: 21px; font-weight: 700;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 0.02em;
+    }
+
+    /* 메인 타이틀 */
+    .title {
+      font-size: 100px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      word-break: keep-all;
+      margin-top: auto;
+      margin-bottom: 48px;
+    }
+
+    /* 하단 태그 */
+    .sub-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255,255,255,0.15);
+      border-radius: 100px;
+      padding: 12px 24px;
+      width: fit-content;
+    }
+    .sub-tag-dot {
+      width: 8px; height: 8px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.7);
+    }
+    .sub-tag-text {
+      font-size: 20px; font-weight: 700;
+      color: rgba(255,255,255,0.85);
+      letter-spacing: 0.03em;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="bg-circle c1"></div>
+    <div class="bg-circle c2"></div>
+    <div class="bg-circle c3"></div>
+    <div class="bg-circle c4"></div>
+
+    <div class="brand">
+      <div class="brand-dot"></div>
+      <span class="brand-name">AI 개념카드</span>
+    </div>
+
+    <div class="title">{{ title }}</div>
+
+    <div class="sub-tag">
+      <div class="sub-tag-dot"></div>
+      <span class="sub-tag-text">직장인 Copilot 활용 시리즈</span>
+    </div>
+  </div>
+</body>
+</html>

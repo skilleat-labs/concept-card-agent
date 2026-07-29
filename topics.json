@@ -1,0 +1,212 @@
+[
+  {
+    "id": 1,
+    "topic": "컨테이너",
+    "teaser": "내 PC에선 되는데 서버에선 왜 안 될까요?",
+    "next_question": "컨테이너와 컨테이너 이미지는 어떻게 다를까?",
+    "thread": "container-basics"
+  },
+  {
+    "id": 2,
+    "topic": "컨테이너 이미지",
+    "teaser": "컨테이너와 컨테이너 이미지, 같은 건가요?",
+    "next_question": "그 이미지는 어떻게 만들고 어디에 저장하지?",
+    "thread": "container-basics"
+  },
+  {
+    "id": 3,
+    "topic": "Dockerfile",
+    "teaser": "이미지를 직접 만들어보고 싶은데, 어디서 시작하죠?",
+    "next_question": "만든 이미지를 팀원과 공유하려면?",
+    "thread": "container-basics"
+  },
+  {
+    "id": 4,
+    "topic": "컨테이너 레지스트리",
+    "teaser": "도커 이미지, 어디에 올려두고 함께 쓸 수 있나요?",
+    "next_question": "컨테이너가 여러 개면 어떻게 한꺼번에 실행하지?",
+    "thread": "container-basics"
+  },
+  {
+    "id": 5,
+    "topic": "도커 컴포즈(Docker Compose)",
+    "teaser": "앱, DB, 캐시 컨테이너를 각각 실행해야 하나요?",
+    "next_question": "컨테이너가 수십 개로 늘어나면 어떻게 관리하지?",
+    "thread": "container-basics"
+  },
+  {
+    "id": 6,
+    "topic": "쿠버네티스(K8s) 등장 배경",
+    "teaser": "컨테이너 100개, 직접 다 켜고 끄고 있나요?",
+    "next_question": "쿠버네티스가 정확히 뭘 해주는 건데?",
+    "thread": "kubernetes"
+  },
+  {
+    "id": 7,
+    "topic": "쿠버네티스(K8s) 핵심 개념",
+    "teaser": "Pod, Node, Cluster... 쿠버네티스 용어가 너무 많아요",
+    "next_question": "Pod 안에 뭐가 들어가는 거지?",
+    "thread": "kubernetes"
+  },
+  {
+    "id": 8,
+    "topic": "파드(Pod) 라이프사이클",
+    "teaser": "파드가 갑자기 죽으면 서비스도 죽는 건가요?",
+    "next_question": "파드가 죽어도 서비스를 유지하려면?",
+    "thread": "kubernetes"
+  },
+  {
+    "id": 9,
+    "topic": "디플로이먼트(Deployment)",
+    "teaser": "파드가 죽어도 자동으로 살아나게 하려면?",
+    "next_question": "업데이트할 때 서비스를 중단하지 않으려면?",
+    "thread": "kubernetes"
+  },
+  {
+    "id": 10,
+    "topic": "롤링 업데이트 vs 블루그린 배포",
+    "teaser": "배포하는 순간 사용자가 에러를 보면 안 되잖아요",
+    "next_question": "외부에서 내 서비스에 어떻게 접근하게 하지?",
+    "thread": "kubernetes"
+  },
+  {
+    "id": 11,
+    "topic": "서비스(Service)와 인그레스",
+    "teaser": "파드 IP는 계속 바뀌는데 어떻게 접속하나요?",
+    "next_question": "트래픽이 갑자기 몰리면 어떻게 대응하지?",
+    "thread": "kubernetes"
+  },
+  {
+    "id": 12,
+    "topic": "오토스케일링(HPA)",
+    "teaser": "갑자기 트래픽이 10배가 됐는데, 수동으로 늘려야 하나요?",
+    "next_question": "설정값은 코드와 어떻게 분리해서 관리하지?",
+    "thread": "kubernetes"
+  },
+  {
+    "id": 13,
+    "topic": "컨피그맵 & 시크릿",
+    "teaser": "DB 비밀번호를 코드에 그냥 넣으면 안 되잖아요",
+    "next_question": "코드를 올리면 자동으로 배포까지 되면 좋겠는데?",
+    "thread": "cicd"
+  },
+  {
+    "id": 14,
+    "topic": "CI/CD 파이프라인",
+    "teaser": "코드 올릴 때마다 직접 배포하고 계세요?",
+    "next_question": "CI/CD에서 테스트는 어떻게 자동화하지?",
+    "thread": "cicd"
+  },
+  {
+    "id": 15,
+    "topic": "GitHub Actions",
+    "teaser": "Jenkins 없이도 CI/CD를 구축할 수 있나요?",
+    "next_question": "배포 후 서비스가 잘 돌고 있는지 어떻게 알지?",
+    "thread": "cicd"
+  },
+  {
+    "id": 16,
+    "topic": "오브저버빌리티(Prometheus/Grafana)",
+    "teaser": "서버가 언제 터질지 미리 알 수 있을까요?",
+    "next_question": "로그는 또 어떻게 한 곳에서 보지?",
+    "thread": "observability"
+  },
+  {
+    "id": 17,
+    "topic": "로드 밸런서",
+    "teaser": "서버 한 대가 요청을 다 받아야 하나요?",
+    "next_question": "마이크로서비스끼리 통신은 어떻게 관리하지?",
+    "thread": "networking"
+  },
+  {
+    "id": 18,
+    "topic": "서비스 메시(Istio)",
+    "teaser": "서비스가 50개면 통신 관리를 어떻게 하죠?",
+    "next_question": "네트워크 보안 정책은 어떻게 설정하지?",
+    "thread": "networking"
+  },
+  {
+    "id": 19,
+    "topic": "네트워크 폴리시",
+    "teaser": "쿠버네티스에서 파드끼리 다 통신이 되면 위험하지 않나요?",
+    "next_question": "사람마다 접근 권한을 다르게 주려면?",
+    "thread": "security"
+  },
+  {
+    "id": 20,
+    "topic": "RBAC (역할 기반 접근제어)",
+    "teaser": "팀원이 실수로 프로덕션 파드를 삭제하면 어떡하죠?",
+    "next_question": "마이크로서비스 아키텍처는 왜 필요한 걸까?",
+    "thread": "security"
+  },
+  {
+    "id": 21,
+    "topic": "마이크로서비스(MSA)",
+    "teaser": "서비스 하나 배포하는데 전체가 멈춰야 하나요?",
+    "next_question": "서버리스와 컨테이너 중 뭘 선택해야 하지?",
+    "thread": "architecture"
+  },
+  {
+    "id": 22,
+    "topic": "서버리스 vs 컨테이너",
+    "teaser": "서버를 직접 관리하지 않아도 된다고요?",
+    "next_question": "헬름 차트로 배포를 더 쉽게 할 수 있다는데?",
+    "thread": "architecture"
+  },
+  {
+    "id": 23,
+    "topic": "헬름 차트(Helm)",
+    "teaser": "쿠버네티스 YAML 파일이 너무 많아서 관리가 힘들어요",
+    "next_question": "StatefulSet은 Deployment와 뭐가 다르지?",
+    "thread": "kubernetes"
+  },
+  {
+    "id": 24,
+    "topic": "StatefulSet vs Deployment",
+    "teaser": "DB는 왜 Deployment로 배포하면 안 되나요?",
+    "next_question": "퍼시스턴트 볼륨은 또 뭐야?",
+    "thread": "kubernetes"
+  },
+  {
+    "id": 25,
+    "topic": "퍼시스턴트 볼륨(PV/PVC)",
+    "teaser": "파드가 죽으면 저장된 데이터도 같이 사라지나요?",
+    "next_question": "리소스를 제한하지 않으면 어떤 일이 생기지?",
+    "thread": "kubernetes"
+  },
+  {
+    "id": 26,
+    "topic": "리소스 리퀘스트 & 리밋",
+    "teaser": "파드 하나가 서버 CPU를 다 잡아먹고 있는데요",
+    "next_question": "노드 어디에 파드를 올릴지 제어할 수 있나?",
+    "thread": "kubernetes"
+  },
+  {
+    "id": 27,
+    "topic": "파드 어피니티 & 안티어피니티",
+    "teaser": "DB 파드와 앱 파드를 같은 노드에 두면 안 되나요?",
+    "next_question": "eBPF가 쿠버네티스를 어떻게 바꾸고 있지?",
+    "thread": "advanced"
+  },
+  {
+    "id": 28,
+    "topic": "eBPF",
+    "teaser": "커널을 건드리지 않고 네트워크를 제어할 수 있다고요?",
+    "next_question": "오퍼레이터 패턴으로 뭘 자동화할 수 있지?",
+    "thread": "advanced"
+  },
+  {
+    "id": 29,
+    "topic": "오퍼레이터 패턴",
+    "teaser": "쿠버네티스가 DB까지 알아서 관리해줄 수 있나요?",
+    "next_question": "사이드카 패턴은 어디에 쓰이는 건데?",
+    "thread": "advanced"
+  },
+  {
+    "id": 30,
+    "topic": "사이드카 패턴",
+    "teaser": "로깅, 모니터링을 앱 코드에 직접 넣어야 하나요?",
+    "next_question": "멀티 클러스터 전략은 왜 필요한 걸까?",
+    "thread": "advanced"
+  }
+]

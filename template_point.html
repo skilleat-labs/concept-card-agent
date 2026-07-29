@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html, body { width: 1080px; height: 1350px; overflow: hidden; font-family: 'Noto Sans KR', sans-serif; }
+
+    .card {
+      position: relative;
+      width: 1080px;
+      height: 1350px;
+      background: #ffffff;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding: 72px 72px 80px 72px;
+    }
+
+    /* 상단: 슬라이드 번호 + 주제 */
+    .top-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-shrink: 0;
+    }
+    .slide-num {
+      font-size: 18px;
+      font-weight: 700;
+      color: #2B4FE8;
+      letter-spacing: 0.12em;
+    }
+    .topic-chip {
+      font-size: 17px;
+      font-weight: 700;
+      color: #8B8FA8;
+      letter-spacing: 0.04em;
+    }
+
+    /* 큰 배경 번호 */
+    .bg-number {
+      position: absolute;
+      font-size: 380px;
+      font-weight: 900;
+      color: rgba(43, 79, 232, 0.05);
+      line-height: 1;
+      right: 40px;
+      bottom: 180px;
+      letter-spacing: -0.04em;
+      pointer-events: none;
+      user-select: none;
+    }
+
+    /* 포인트 텍스트 */
+    .point-area {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .point-label {
+      font-size: 15px;
+      font-weight: 700;
+      color: #2B4FE8;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 28px;
+    }
+    .point-text {
+      font-size: 62px;
+      font-weight: 900;
+      color: #1A1A35;
+      line-height: 1.2;
+      letter-spacing: -0.02em;
+      word-break: keep-all;
+    }
+
+    /* 하단 구분선 + 컨텍스트 */
+    .bottom-row {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      padding-top: 40px;
+      border-top: 1.5px solid #EEEEF4;
+    }
+    .bottom-bar {
+      width: 4px;
+      height: 44px;
+      background: #2B4FE8;
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .bottom-text {
+      font-size: 22px;
+      font-weight: 400;
+      color: #8B8FA8;
+      line-height: 1.5;
+      word-break: keep-all;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="bg-number">{{ point_num }}</div>
+
+    <div class="top-row">
+      <span class="slide-num">{{ point_num }} / 03</span>
+      <span class="topic-chip"># {{ topic }}</span>
+    </div>
+
+    <div class="point-area">
+      <div class="point-label">핵심 포인트</div>
+      <div class="point-text">{{ point_text }}</div>
+    </div>
+
+    <div class="bottom-row">
+      <div class="bottom-bar"></div>
+      <div class="bottom-text">{{ title }}</div>
+    </div>
+  </div>
+</body>
+</html>
