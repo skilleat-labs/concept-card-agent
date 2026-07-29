@@ -13,10 +13,20 @@
     "topic": "컨테이너 이미지",
     "title": "컨테이너 이미지",
     "next_question": "그 이미지는 어떻게 만들고 어디에 저장하지?",
-    "thread": "",
+    "thread": "container-basics",
     "published_at": "2026-07-30T00:06:36.098723+09:00",
     "image_file": "slide1_컨테이너_이미지_20260730_000551.png",
     "post_id": "17899638258519236",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________20260730_000551.png"
+  },
+  {
+    "topic": "Dockerfile",
+    "title": "Dockerfile",
+    "next_question": "만든 이미지를 팀원과 공유하려면?",
+    "thread": "container-basics",
+    "published_at": "2026-07-30T00:12:41.000000+09:00",
+    "image_file": "slide1_Dockerfile_20260730_001150.png",
+    "post_id": "17958118653168168",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_Dockerfile_20260730_001150.png"
   }
 ]
