@@ -635,18 +635,22 @@ def publish_carousel_to_instagram(image_urls: list[str], content: dict) -> str:
         raise RuntimeError(f"캐러셀 컨테이너 생성 실패: {carousel_resp.json()}")
     log("INSTAGRAM", f"캐러셀 컨테이너 ID: {carousel_id}")
 
-    # 3단계: 발행 (Instagram 처리 대기 후 시도)
+    # 3단계: 발행 (최대 3회 재시도, Instagram 처리 대기)
     import time as _time
-    _time.sleep(3)
-    publish_resp = requests.post(f"{base_url}/media_publish", data={
-        "creation_id": carousel_id,
-        "access_token": ig_access_token,
-    }, timeout=30)
-    if not publish_resp.ok:
-        raise RuntimeError(f"발행 오류 {publish_resp.status_code}: {publish_resp.text}")
-    post_id = publish_resp.json().get("id")
+    post_id = None
+    for attempt in range(1, 4):
+        _time.sleep(5 * attempt)
+        publish_resp = requests.post(f"{base_url}/media_publish", data={
+            "creation_id": carousel_id,
+            "access_token": ig_access_token,
+        }, timeout=30)
+        if publish_resp.ok:
+            post_id = publish_resp.json().get("id")
+            if post_id:
+                break
+        log("INSTAGRAM", f"발행 시도 {attempt}/3 실패: {publish_resp.text}")
     if not post_id:
-        raise RuntimeError(f"게시물 발행 실패: {publish_resp.json()}")
+        raise RuntimeError(f"발행 최종 실패 (carousel_id={carousel_id}): {publish_resp.text}")
 
     log("INSTAGRAM", f"발행 완료. 게시물 ID: {post_id}")
     return post_id
@@ -798,7 +802,7 @@ def main() -> None:
         # ── 단계 7: Instagram 캐러셀 발행 (3장) ──
         post_id = publish_carousel_to_instagram(image_urls, {**final_content, "caption": caption})
 
-        # ── 단계 8: 이력 기록 ──
+        # ── 단계 8: 이력 기록 (발행 직후 즉시 — 이후 에러 나도 중복 방지) ──
         record_published(topic, final_content, final_paths[0], post_id=post_id, image_url=image_urls[0])
 
         print()
