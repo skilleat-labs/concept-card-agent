@@ -28,5 +28,15 @@
     "image_file": "slide1_Dockerfile_20260730_001150.png",
     "post_id": "17958118653168168",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_Dockerfile_20260730_001150.png"
+  },
+  {
+    "topic": "컨테이너 레지스트리",
+    "title": "컨테이너 레지스트리",
+    "next_question": "그런데 컨테이너, 정체가 대체 뭘까?",
+    "thread": "",
+    "published_at": "2026-07-30T10:10:02.998660+09:00",
+    "image_file": "slide1_컨테이너_레지스트리_20260730_100914.png",
+    "post_id": "18345290440220872",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____________20260730_100914.png"
   }
 ]
