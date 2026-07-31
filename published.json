@@ -48,5 +48,15 @@
     "image_file": "slide1_컨테이너의_정체_20260730_104156.png",
     "post_id": "18376449937226325",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________20260730_104156.png"
+  },
+  {
+    "topic": "프로세스와 커널",
+    "title": "프로세스와 커널",
+    "next_question": "프로세스끼리 서로 안 보이게 격리하려면?",
+    "thread": "",
+    "published_at": "2026-07-31T09:26:51.793476+09:00",
+    "image_file": "slide1_프로세스와_커널_20260731_092606.png",
+    "post_id": "18112366082484785",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________20260731_092606.png"
   }
 ]
