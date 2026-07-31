@@ -58,5 +58,15 @@
     "image_file": "slide1_프로세스와_커널_20260731_092606.png",
     "post_id": "18112366082484785",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________20260731_092606.png"
+  },
+  {
+    "topic": "리눅스 네임스페이스",
+    "title": "리눅스 네임스페이스",
+    "next_question": "CPU와 메모리는 어떻게 나눠 쓰게 하지?",
+    "thread": "",
+    "published_at": "2026-07-31T11:00:16.001573+09:00",
+    "image_file": "slide1_리눅스_네임스페이스_20260731_105928.png",
+    "post_id": "18203485420364911",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____________20260731_105928.png"
   }
 ]
