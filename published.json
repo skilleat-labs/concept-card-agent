@@ -88,5 +88,15 @@
     "image_file": "slide1_이미지_레이어_20260801_173904.png",
     "post_id": "18086702693188887",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_________20260801_173904.png"
+  },
+  {
+    "topic": "가상화와 하이퍼바이저",
+    "title": "가상화와 하이퍼바이저",
+    "next_question": "VM과 컨테이너, 그래서 뭘 선택해야 하지?",
+    "thread": "",
+    "published_at": "2026-08-02T07:46:42.127056+09:00",
+    "image_file": "slide1_가상화와_하이퍼바이저_20260802_074555.png",
+    "post_id": "18091089011537117",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_____________20260802_074555.png"
   }
 ]
