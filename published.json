@@ -68,5 +68,15 @@
     "image_file": "slide1_리눅스_네임스페이스_20260731_105928.png",
     "post_id": "18203485420364911",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____________20260731_105928.png"
+  },
+  {
+    "topic": "cgroups",
+    "title": "cgroups",
+    "next_question": "그런데 컨테이너 이미지는 왜 이렇게 가볍지?",
+    "thread": "",
+    "published_at": "2026-08-01T11:01:31.650192+09:00",
+    "image_file": "slide1_cgroups_20260801_110041.png",
+    "post_id": "18137989915600642",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_cgroups_20260801_110041.png"
   }
 ]
