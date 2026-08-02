@@ -98,5 +98,15 @@
     "image_file": "slide1_가상화와_하이퍼바이저_20260802_074555.png",
     "post_id": "18091089011537117",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_____________20260802_074555.png"
+  },
+  {
+    "topic": "VM vs 컨테이너",
+    "title": "VM vs 컨테이너",
+    "next_question": "앱에 접속하려면 주소가 필요한데, IP와 포트가 뭐지?",
+    "thread": "",
+    "published_at": "2026-08-03T07:47:50.903378+09:00",
+    "image_file": "slide1_VM_vs_컨테이너_20260803_074702.png",
+    "post_id": "18084810965241531",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_VM_vs______20260803_074702.png"
   }
 ]
