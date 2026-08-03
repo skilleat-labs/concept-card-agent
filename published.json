@@ -108,5 +108,15 @@
     "image_file": "slide1_VM_vs_컨테이너_20260803_074702.png",
     "post_id": "18084810965241531",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_VM_vs______20260803_074702.png"
+  },
+  {
+    "topic": "IP와 포트",
+    "title": "IP와 포트",
+    "next_question": "매번 IP 숫자를 외워서 접속해야 하나?",
+    "thread": "",
+    "published_at": "2026-08-04T07:54:50.644449+09:00",
+    "image_file": "slide1_IP와_포트_20260804_075402.png",
+    "post_id": "18127540684709064",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_IP_____20260804_075402.png"
   }
 ]
