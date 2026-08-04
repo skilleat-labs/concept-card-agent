@@ -118,5 +118,15 @@
     "image_file": "slide1_IP와_포트_20260804_075402.png",
     "post_id": "18127540684709064",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_IP_____20260804_075402.png"
+  },
+  {
+    "topic": "DNS",
+    "title": "DNS",
+    "next_question": "그럼 컨테이너 안의 앱에는 어떻게 접속하지?",
+    "thread": "",
+    "published_at": "2026-08-05T07:55:11.223023+09:00",
+    "image_file": "slide1_DNS_20260805_075424.png",
+    "post_id": "18120265961309067",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_DNS_20260805_075424.png"
   }
 ]
