@@ -128,5 +128,15 @@
     "image_file": "slide1_DNS_20260805_075424.png",
     "post_id": "18120265961309067",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_DNS_20260805_075424.png"
+  },
+  {
+    "topic": "컨테이너 네트워크와 포트 매핑",
+    "title": "포트 매핑",
+    "next_question": "컨테이너가 죽으면 데이터도 같이 사라지나?",
+    "thread": "",
+    "published_at": "2026-08-06T07:51:07.101152+09:00",
+    "image_file": "slide1_컨테이너_네트워크와_포트_매핑_20260806_075020.png",
+    "post_id": "18173673886438500",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________________20260806_075020.png"
   }
 ]
