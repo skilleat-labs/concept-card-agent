@@ -138,5 +138,15 @@
     "image_file": "slide1_컨테이너_네트워크와_포트_매핑_20260806_075020.png",
     "post_id": "18173673886438500",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________________20260806_075020.png"
+  },
+  {
+    "topic": "볼륨(데이터 저장)",
+    "title": "볼륨",
+    "next_question": "앱, DB, 캐시를 한 번에 띄우려면?",
+    "thread": "",
+    "published_at": "2026-08-07T10:29:59.565630+09:00",
+    "image_file": "slide1_볼륨_데이터_저장__20260807_102911.png",
+    "post_id": "18348800716168346",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____________20260807_102911.png"
   }
 ]
