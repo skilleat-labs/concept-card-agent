@@ -148,5 +148,15 @@
     "image_file": "slide1_볼륨_데이터_저장__20260807_102911.png",
     "post_id": "18348800716168346",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____________20260807_102911.png"
+  },
+  {
+    "topic": "도커 컴포즈(Docker Compose)",
+    "title": "도커 컴포즈",
+    "next_question": "내 PC 말고 진짜 서버에 올리려면 어떻게 하지?",
+    "thread": "",
+    "published_at": "2026-08-08T07:27:52.125501+09:00",
+    "image_file": "slide1_도커_컴포즈_Docker_Compose__20260808_072701.png",
+    "post_id": "17943044856270827",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1________Docker_Compose__20260808_072701.png"
   }
 ]
