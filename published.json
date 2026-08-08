@@ -158,5 +158,15 @@
     "image_file": "slide1_도커_컴포즈_Docker_Compose__20260808_072701.png",
     "post_id": "17943044856270827",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1________Docker_Compose__20260808_072701.png"
+  },
+  {
+    "topic": "클라우드 컴퓨팅(IaaS/PaaS/SaaS)",
+    "title": "클라우드 컴퓨팅",
+    "next_question": "사용자가 늘어나면 서버는 어떻게 늘리지?",
+    "thread": "",
+    "published_at": "2026-08-09T07:20:24.106996+09:00",
+    "image_file": "slide1_클라우드_컴퓨팅_IaaS_PaaS_SaaS__20260809_071936.png",
+    "post_id": "18021066353696852",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________IaaS_PaaS_SaaS__20260809_071936.png"
   }
 ]
