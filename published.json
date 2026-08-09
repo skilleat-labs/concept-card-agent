@@ -168,5 +168,15 @@
     "image_file": "slide1_클라우드_컴퓨팅_IaaS_PaaS_SaaS__20260809_071936.png",
     "post_id": "18021066353696852",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________IaaS_PaaS_SaaS__20260809_071936.png"
+  },
+  {
+    "topic": "스케일 업 vs 스케일 아웃",
+    "title": "스케일 업 vs 아웃",
+    "next_question": "서버가 여러 대면 요청은 누가 나눠주지?",
+    "thread": "",
+    "published_at": "2026-08-10T07:22:06.771152+09:00",
+    "image_file": "slide1_스케일_업_vs_스케일_아웃_20260810_072118.png",
+    "post_id": "17896421805377513",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_______vs________20260810_072118.png"
   }
 ]
