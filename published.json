@@ -178,5 +178,15 @@
     "image_file": "slide1_스케일_업_vs_스케일_아웃_20260810_072118.png",
     "post_id": "17896421805377513",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_______vs________20260810_072118.png"
+  },
+  {
+    "topic": "로드 밸런서",
+    "title": "로드 밸런서",
+    "next_question": "그런데 기능 하나 고치는데 왜 전체를 배포하지?",
+    "thread": "",
+    "published_at": "2026-08-11T07:29:24.077206+09:00",
+    "image_file": "slide1_로드_밸런서_20260811_072832.png",
+    "post_id": "18068541170717898",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1________20260811_072832.png"
   }
 ]
