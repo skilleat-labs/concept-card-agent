@@ -188,5 +188,15 @@
     "image_file": "slide1_로드_밸런서_20260811_072832.png",
     "post_id": "18068541170717898",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1________20260811_072832.png"
+  },
+  {
+    "topic": "마이크로서비스(MSA)",
+    "title": "마이크로서비스",
+    "next_question": "서비스가 많아지면 배포는 어떻게 자동화하지?",
+    "thread": "",
+    "published_at": "2026-08-12T07:34:20.602801+09:00",
+    "image_file": "slide1_마이크로서비스_MSA__20260812_073330.png",
+    "post_id": "18468617080112146",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_________MSA__20260812_073330.png"
   }
 ]
