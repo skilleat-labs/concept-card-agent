@@ -198,5 +198,15 @@
     "image_file": "slide1_마이크로서비스_MSA__20260812_073330.png",
     "post_id": "18468617080112146",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_________MSA__20260812_073330.png"
+  },
+  {
+    "topic": "CI/CD 파이프라인",
+    "title": "CI/CD 파이프라인",
+    "next_question": "Jenkins 없이도 CI/CD가 될까?",
+    "thread": "",
+    "published_at": "2026-08-13T07:32:57.542759+09:00",
+    "image_file": "slide1_CI_CD_파이프라인_20260813_073203.png",
+    "post_id": "18088604135398293",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_CI_CD_______20260813_073203.png"
   }
 ]
