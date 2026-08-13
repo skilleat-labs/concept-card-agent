@@ -208,5 +208,15 @@
     "image_file": "slide1_CI_CD_파이프라인_20260813_073203.png",
     "post_id": "18088604135398293",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_CI_CD_______20260813_073203.png"
+  },
+  {
+    "topic": "GitHub Actions",
+    "title": "GitHub Actions",
+    "next_question": "아예 서버 관리 자체를 안 할 수는 없을까?",
+    "thread": "",
+    "published_at": "2026-08-14T07:33:23.041163+09:00",
+    "image_file": "slide1_GitHub_Actions_20260814_073234.png",
+    "post_id": "18112975309748095",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_GitHub_Actions_20260814_073234.png"
   }
 ]
