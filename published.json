@@ -218,5 +218,15 @@
     "image_file": "slide1_GitHub_Actions_20260814_073234.png",
     "post_id": "18112975309748095",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_GitHub_Actions_20260814_073234.png"
+  },
+  {
+    "topic": "서버리스 vs 컨테이너",
+    "title": "서버리스 vs 컨테이너",
+    "next_question": "컨테이너가 수십 개로 늘어나면 누가 관리하지?",
+    "thread": "",
+    "published_at": "2026-08-15T07:15:28.933688+09:00",
+    "image_file": "slide1_서버리스_vs_컨테이너_20260815_071437.png",
+    "post_id": "18101964511946660",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1______vs______20260815_071437.png"
   }
 ]
