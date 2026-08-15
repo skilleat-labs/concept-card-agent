@@ -228,5 +228,15 @@
     "image_file": "slide1_서버리스_vs_컨테이너_20260815_071437.png",
     "post_id": "18101964511946660",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1______vs______20260815_071437.png"
+  },
+  {
+    "topic": "컨테이너 오케스트레이션",
+    "title": "컨테이너 오케스트레이션",
+    "next_question": "그 문제를 풀려고 구글이 만든 도구가 있다고?",
+    "thread": "",
+    "published_at": "2026-08-16T07:13:20.899108+09:00",
+    "image_file": "slide1_컨테이너_오케스트레이션_20260816_071231.png",
+    "post_id": "17955351051211476",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1______________20260816_071231.png"
   }
 ]
