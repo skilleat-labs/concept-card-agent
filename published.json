@@ -238,5 +238,15 @@
     "image_file": "slide1_컨테이너_오케스트레이션_20260816_071231.png",
     "post_id": "17955351051211476",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1______________20260816_071231.png"
+  },
+  {
+    "topic": "쿠버네티스(K8s)의 등장",
+    "title": "K8s의 등장",
+    "next_question": "쿠버네티스가 정확히 뭘 해주는 건데?",
+    "thread": "",
+    "published_at": "2026-08-17T07:13:44.816548+09:00",
+    "image_file": "slide1_쿠버네티스_K8s_의_등장_20260817_071256.png",
+    "post_id": "17980243026111074",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_______K8s______20260817_071256.png"
   }
 ]
