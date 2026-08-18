@@ -248,5 +248,15 @@
     "image_file": "slide1_쿠버네티스_K8s_의_등장_20260817_071256.png",
     "post_id": "17980243026111074",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_______K8s______20260817_071256.png"
+  },
+  {
+    "topic": "쿠버네티스(K8s) 핵심 개념",
+    "title": "쿠버네티스",
+    "next_question": "파드가 갑자기 죽으면 서비스도 죽는 거 아닌가?",
+    "thread": "",
+    "published_at": "2026-08-19T07:14:47.493295+09:00",
+    "image_file": "slide1_쿠버네티스_K8s__핵심_개념_20260819_071353.png",
+    "post_id": "18279960592290552",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_______K8s________20260819_071353.png"
   }
 ]
