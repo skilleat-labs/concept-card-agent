@@ -258,5 +258,15 @@
     "image_file": "slide1_쿠버네티스_K8s__핵심_개념_20260819_071353.png",
     "post_id": "18279960592290552",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_______K8s________20260819_071353.png"
+  },
+  {
+    "topic": "디플로이먼트(Deployment)",
+    "title": "디플로이먼트",
+    "next_question": "파드 IP는 계속 바뀌는데 어떻게 접속하지?",
+    "thread": "",
+    "published_at": "2026-08-20T07:17:11.065049+09:00",
+    "image_file": "slide1_디플로이먼트_Deployment__20260820_071624.png",
+    "post_id": "17866150854642877",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1________Deployment__20260820_071624.png"
   }
 ]
