@@ -268,5 +268,15 @@
     "image_file": "slide1_디플로이먼트_Deployment__20260820_071624.png",
     "post_id": "17866150854642877",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1________Deployment__20260820_071624.png"
+  },
+  {
+    "topic": "서비스(Service)와 인그레스",
+    "title": "서비스와 인그레스",
+    "next_question": "업데이트할 때 서비스를 중단하지 않으려면?",
+    "thread": "",
+    "published_at": "2026-08-21T07:18:49.144098+09:00",
+    "image_file": "slide1_서비스_Service_와_인그레스_20260821_071751.png",
+    "post_id": "17898610077588497",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_____Service________20260821_071751.png"
   }
 ]
