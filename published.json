@@ -278,5 +278,15 @@
     "image_file": "slide1_서비스_Service_와_인그레스_20260821_071751.png",
     "post_id": "17898610077588497",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_____Service________20260821_071751.png"
+  },
+  {
+    "topic": "롤링 업데이트 vs 블루그린 배포",
+    "title": "롤링 vs 블루그린",
+    "next_question": "트래픽이 갑자기 몰리면 자동으로 늘릴 수 없을까?",
+    "thread": "",
+    "published_at": "2026-08-22T07:16:08.444459+09:00",
+    "image_file": "slide1_롤링_업데이트_vs_블루그린_배포_20260822_071513.png",
+    "post_id": "18072523877467442",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_________vs_________20260822_071513.png"
   }
 ]
