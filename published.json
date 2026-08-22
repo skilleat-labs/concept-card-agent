@@ -288,5 +288,15 @@
     "image_file": "slide1_롤링_업데이트_vs_블루그린_배포_20260822_071513.png",
     "post_id": "18072523877467442",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_________vs_________20260822_071513.png"
+  },
+  {
+    "topic": "오토스케일링(HPA)",
+    "title": "오토스케일링",
+    "next_question": "설정 관리, 헬름, 모니터링, 그리고 보안까지... 시즌 2에서 계속?",
+    "thread": "",
+    "published_at": "2026-08-23T07:14:22.247557+09:00",
+    "image_file": "slide1_오토스케일링_HPA__20260823_071329.png",
+    "post_id": "18200545972373298",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1________HPA__20260823_071329.png"
   }
 ]
