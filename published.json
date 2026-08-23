@@ -298,5 +298,15 @@
     "image_file": "slide1_오토스케일링_HPA__20260823_071329.png",
     "post_id": "18200545972373298",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1________HPA__20260823_071329.png"
+  },
+  {
+    "topic": "쿠버네티스 설정 관리(ConfigMap & Secret)",
+    "title": "ConfigMap & Secret",
+    "next_question": "",
+    "thread": "",
+    "published_at": "2026-08-24T07:14:12.621305+09:00",
+    "image_file": "slide1_쿠버네티스_설정_관리_ConfigMap___Secret__20260824_071322.png",
+    "post_id": "18101072237006847",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_____________ConfigMap___Secret__20260824_071322.png"
   }
 ]
