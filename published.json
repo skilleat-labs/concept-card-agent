@@ -308,5 +308,15 @@
     "image_file": "slide1_쿠버네티스_설정_관리_ConfigMap___Secret__20260824_071322.png",
     "post_id": "18101072237006847",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_____________ConfigMap___Secret__20260824_071322.png"
+  },
+  {
+    "topic": "쿠버네티스 설정 관리(ConfigMap & Secret)",
+    "title": "ConfigMap & Secret",
+    "next_question": "",
+    "thread": "",
+    "published_at": "2026-08-25T07:18:00.261560+09:00",
+    "image_file": "slide1_쿠버네티스_설정_관리_ConfigMap___Secret__20260825_071710.png",
+    "post_id": "17912292783261706",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_____________ConfigMap___Secret__20260825_071710.png"
   }
 ]
