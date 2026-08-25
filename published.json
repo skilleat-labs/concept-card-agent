@@ -318,5 +318,15 @@
     "image_file": "slide1_쿠버네티스_설정_관리_ConfigMap___Secret__20260825_071710.png",
     "post_id": "17912292783261706",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_____________ConfigMap___Secret__20260825_071710.png"
+  },
+  {
+    "topic": "헬름(Helm)",
+    "title": "헬름(Helm)",
+    "next_question": "",
+    "thread": "",
+    "published_at": "2026-08-26T07:19:02.925337+09:00",
+    "image_file": "slide1_헬름_Helm__20260826_071813.png",
+    "post_id": "18058361228788234",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____Helm__20260826_071813.png"
   }
 ]
