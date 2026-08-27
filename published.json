@@ -328,5 +328,15 @@
     "image_file": "slide1_헬름_Helm__20260826_071813.png",
     "post_id": "18058361228788234",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____Helm__20260826_071813.png"
+  },
+  {
+    "topic": "쿠버네티스 모니터링(Prometheus & Grafana)",
+    "title": "쿠버네티스 모니터링",
+    "next_question": "",
+    "thread": "",
+    "published_at": "2026-08-27T11:27:44.274368+09:00",
+    "image_file": "slide1_쿠버네티스_모니터링_Prometheus___Grafana__20260827_112652.png",
+    "post_id": "17898405621589380",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____________Prometheus___Grafana__20260827_112652.png"
   }
 ]
