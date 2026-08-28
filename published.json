@@ -338,5 +338,15 @@
     "image_file": "slide1_쿠버네티스_모니터링_Prometheus___Grafana__20260827_112652.png",
     "post_id": "17898405621589380",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____________Prometheus___Grafana__20260827_112652.png"
+  },
+  {
+    "topic": "로깅과 트레이싱(Logging & Tracing)",
+    "title": "로깅 & 트레이싱",
+    "next_question": "",
+    "thread": "",
+    "published_at": "2026-08-28T14:54:42.342202+09:00",
+    "image_file": "slide1_로깅과_트레이싱_Logging___Tracing__20260828_145353.png",
+    "post_id": "18010823105755962",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________Logging___Tracing__20260828_145353.png"
   }
 ]
