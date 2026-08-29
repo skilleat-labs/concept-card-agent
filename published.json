@@ -348,5 +348,15 @@
     "image_file": "slide1_로깅과_트레이싱_Logging___Tracing__20260828_145353.png",
     "post_id": "18010823105755962",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________Logging___Tracing__20260828_145353.png"
+  },
+  {
+    "topic": "서비스 메시(Service Mesh)",
+    "title": "서비스 메시",
+    "next_question": "",
+    "thread": "",
+    "published_at": "2026-08-29T12:27:42.788294+09:00",
+    "image_file": "slide1_서비스_메시_Service_Mesh__20260829_122651.png",
+    "post_id": "18036799010641398",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1________Service_Mesh__20260829_122651.png"
   }
 ]
