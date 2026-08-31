@@ -358,5 +358,15 @@
     "image_file": "slide1_서비스_메시_Service_Mesh__20260829_122651.png",
     "post_id": "18036799010641398",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1________Service_Mesh__20260829_122651.png"
+  },
+  {
+    "topic": "GitOps",
+    "title": "GitOps",
+    "next_question": "",
+    "thread": "",
+    "published_at": "2026-08-31T09:04:50.502271+09:00",
+    "image_file": "slide1_GitOps_20260831_090400.png",
+    "post_id": "18210181648361974",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_GitOps_20260831_090400.png"
   }
 ]
