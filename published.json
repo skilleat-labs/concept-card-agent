@@ -378,5 +378,15 @@
     "image_file": "slide1_플랫폼_엔지니어링_Platform_Engineering__20260901_095559.png",
     "post_id": "18388759057160353",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1___________Platform_Engineering__20260901_095559.png"
+  },
+  {
+    "topic": "서비스 메시(Service Mesh)",
+    "title": "서비스 메시",
+    "next_question": "",
+    "thread": "",
+    "published_at": "2026-09-02T08:43:00.600318+09:00",
+    "image_file": "slide1_서비스_메시_Service_Mesh__20260902_084216.png",
+    "post_id": "18163916281481320",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1________Service_Mesh__20260902_084216.png"
   }
 ]
