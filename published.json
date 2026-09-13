@@ -18,5 +18,15 @@
     "image_file": "slide1_데이터센터_20260913_103436.png",
     "post_id": "18093039512557544",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_______20260913_103436.png"
+  },
+  {
+    "topic": "서버 하드웨어 구성",
+    "title": "서버 하드웨어",
+    "next_question": "디스크가 갑자기 고장나면 데이터는 어떻게 되지?",
+    "thread": "",
+    "published_at": "2026-09-13T10:41:37.335681+09:00",
+    "image_file": "slide1_서버_하드웨어_구성_20260913_104031.png",
+    "post_id": "18121129429917262",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____________20260913_104031.png"
   }
 ]
