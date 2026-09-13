@@ -200,6 +200,12 @@ def select_topic(client: anthropic.Anthropic, forced_topic: str | None = None) -
     topic = result["topic"]
     reason = result.get("reason", "")
 
+    # 주제 소진 감지: Claude가 유효한 topic을 반환하지 못한 경우
+    all_topic_names = [t["topic"] for t in topics if isinstance(t, dict)]
+    if topic not in all_topic_names:
+        log("SELECT", f"⚠️  전체 주제 소진 — 발행 가능한 새 주제가 없습니다. 에이전트를 종료합니다.")
+        sys.exit(0)
+
     log("SELECT", f"선택된 주제: {topic}")
     log("SELECT", f"선택 이유: {reason}")
     return topic
@@ -298,7 +304,7 @@ def write_card_content(client: anthropic.Anthropic, topic: str, references: str 
     log("WRITE", f"응답 원문 (앞300자): {response_text[:300]!r}")
     content = parse_json_response(response_text)
 
-    required_keys = ["title", "hook", "category", "summary", "definition", "tags"]
+    required_keys = ["title", "hook", "category", "summary", "definition", "points", "tags"]
     for key in required_keys:
         if key not in content:
             raise ValueError(f"문안 응답에 '{key}' 키 누락: {content}")
@@ -357,6 +363,7 @@ def render_three_slides(content: dict, topic: str, timestamp: str) -> list[Path]
         category=content.get("category", ""),
         summary=content.get("summary", ""),
         definition=content.get("definition", ""),
+        points=content.get("points", []),
         story=content.get("story", ""),
         diagram_svg=content.get("diagram_svg", ""),
         tags=content.get("tags", []),
@@ -440,13 +447,17 @@ def apply_fix(content: dict, fix_instruction: str) -> dict:
         char_match = re.search(r"(\d+)\s*자", fix_instruction)
         if char_match:
             max_chars = int(char_match.group(1))
-            content["points"] = [
-                p[:max_chars] if len(p) > max_chars else p
-                for p in content["points"]
-            ]
+            def _shorten_point(p, n):
+                if isinstance(p, dict):
+                    return {**p, "desc": p["desc"][:n] if len(p.get("desc", "")) > n else p["desc"]}
+                return p[:n] if len(p) > n else p
+            content["points"] = [_shorten_point(p, max_chars) for p in content["points"]]
         else:
-            # 목표 글자 수 명시 없으면 0.8 비율로 축약
-            content["points"] = [shorten_text(p, 0.8) for p in content["points"]]
+            def _shorten_point_ratio(p, ratio):
+                if isinstance(p, dict):
+                    return {**p, "desc": shorten_text(p.get("desc", ""), ratio)}
+                return shorten_text(p, ratio)
+            content["points"] = [_shorten_point_ratio(p, 0.8) for p in content["points"]]
 
     # 'summary'를 줄여야 한다는 지시
     if "summary" in fix_instruction.lower() or "요약" in fix_instruction:
@@ -553,8 +564,9 @@ def generate_instagram_caption(client: anthropic.Anthropic, content: dict) -> st
     tags = content.get("tags", [])
     hashtags_str = " ".join(f"#{t.lstrip('#')}" for t in tags)
 
-    prompt = f"""당신은 인프라/개발 지식을 쉽게 전달하는 인스타그램 계정 운영자입니다.
-아래 개념 카드 내용을 바탕으로 Instagram 게시물 캡션을 작성해주세요.
+    prompt = f"""당신은 인프라/개발 지식을 전달하는 인스타그램 계정 운영자입니다.
+2026년 인스타그램 알고리즘은 공유·리포스트·조회수를 중시합니다.
+아래 개념 카드 내용으로 공유하고 싶어지는 짧고 강렬한 캡션을 작성하세요.
 
 [개념 카드 정보]
 - 제목: {content.get('title', '')}
@@ -563,19 +575,19 @@ def generate_instagram_caption(client: anthropic.Anthropic, content: dict) -> st
 - 정의: {content.get('definition', '')}
 
 [캡션 형식 - 반드시 이 구조를 따르세요]
-1. 첫 줄: 독자의 공감/호기심을 자극하는 질문이나 문장 (1~2줄)
+1. 첫 줄: 강렬한 훅 문장 (20자 이내, 이모지 1개 포함)
 2. 빈 줄
-3. 핵심 개념을 쉽게 풀어쓴 설명 (3~5줄, 비유 활용)
+3. 핵심 인사이트 3가지 (각 줄 한 가지 포인트, 이모지로 시작)
 4. 빈 줄
-5. CTA: "더 자세한 설명은 유튜브 감테크에서 확인하세요 🎬"
+5. "이 내용 아는 개발자 vs 모르는 개발자 — 실무에서 차이가 납니다"
 6. 빈 줄
-7. "💙 팔로우하면 매주 인프라 상식 카드를 받아볼 수 있어요"
+7. "💙 팔로우하면 매일 아침 인프라 개념 1개"
 8. 빈 줄
-9. 해시태그: {hashtags_str} #인프라카드 #개발자 #IT상식 #감테크
+9. 해시태그: {hashtags_str} #인프라 #개발자 #백엔드개발 #DevOps
 
 주의사항:
-- **, *, #, __ 같은 마크다운 문법 절대 사용 금지
-- 강조하고 싶으면 따옴표나 말투로만 표현하세요
+- **, *, __ 같은 마크다운 문법 절대 사용 금지
+- 전체 캡션 200자 이내로 간결하게
 - 캡션 텍스트만 출력하세요. 설명이나 부가 텍스트 없이."""
 
     msg = client.messages.create(
