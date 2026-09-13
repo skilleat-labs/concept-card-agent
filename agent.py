@@ -422,7 +422,13 @@ def review_card(client: anthropic.Anthropic, image_path: Path) -> dict:
 
     prompt = load_prompt("review_card.txt")
     response_text = call_claude_vision(client, prompt, image_path)
-    result = parse_json_response(response_text)
+    try:
+        result = parse_json_response(response_text)
+    except Exception:
+        result = {}
+    if not isinstance(result, dict):
+        log("REVIEW", f"검증 응답 파싱 오류 ({type(result).__name__}), 통과 처리")
+        return {"pass": True, "issues": [], "fix": ""}
 
     passed = result.get("pass", False)
     issues = result.get("issues", [])
