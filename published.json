@@ -28,5 +28,15 @@
     "image_file": "slide1_서버_하드웨어_구성_20260915_021150.png",
     "post_id": "18128211133763923",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____________20260915_021150.png"
+  },
+  {
+    "topic": "RAID와 스토리지",
+    "title": "RAID와 스토리지",
+    "next_question": "서버끼리, 그리고 외부와 어떻게 연결될까?",
+    "thread": "",
+    "published_at": "2026-09-15T11:55:23.392513+09:00",
+    "image_file": "slide1_RAID와_스토리지_20260915_115430.png",
+    "post_id": "18096764606378724",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_RAID_______20260915_115430.png"
   }
 ]
