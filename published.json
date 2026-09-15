@@ -38,5 +38,15 @@
     "image_file": "slide1_RAID와_스토리지_20260915_115430.png",
     "post_id": "18096764606378724",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_RAID_______20260915_115430.png"
+  },
+  {
+    "topic": "네트워크 인프라",
+    "title": "서브네팅",
+    "next_question": "외부 해킹으로부터 서버를 어떻게 보호할까?",
+    "thread": "",
+    "published_at": "2026-09-16T00:52:51.784454+09:00",
+    "image_file": "slide1_네트워크_인프라_20260916_005203.png",
+    "post_id": "18118142758971203",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________20260916_005203.png"
   }
 ]
