@@ -48,5 +48,15 @@
     "image_file": "slide1_네트워크_인프라_20260916_005203.png",
     "post_id": "18118142758971203",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________20260916_005203.png"
+  },
+  {
+    "topic": "방화벽과 네트워크 보안",
+    "title": "방화벽과 네트워크 보안",
+    "next_question": "서버 한 대로 여러 서버처럼 쓸 수는 없을까?",
+    "thread": "",
+    "published_at": "2026-09-16T11:50:41.745834+09:00",
+    "image_file": "slide1_방화벽과_네트워크_보안_20260916_114954.png",
+    "post_id": "17919971550436384",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1______________20260916_114954.png"
   }
 ]
