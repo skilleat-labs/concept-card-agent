@@ -58,5 +58,15 @@
     "image_file": "slide1_방화벽과_네트워크_보안_20260916_114954.png",
     "post_id": "17919971550436384",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1______________20260916_114954.png"
+  },
+  {
+    "topic": "하이퍼바이저와 가상화",
+    "title": "하이퍼바이저",
+    "next_question": "직접 서버를 운영하면 실제로 돈이 얼마나 들까?",
+    "thread": "",
+    "published_at": "2026-09-17T00:44:27.758054+09:00",
+    "image_file": "slide1_하이퍼바이저와_가상화_20260917_004332.png",
+    "post_id": "18110616974129062",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_____________20260917_004332.png"
   }
 ]
