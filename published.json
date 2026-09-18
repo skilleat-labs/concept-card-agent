@@ -88,5 +88,15 @@
     "image_file": "slide1_고가용성과_이중화_20260918_005021.png",
     "post_id": "18121454818938739",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1___________20260918_005021.png"
+  },
+  {
+    "topic": "온프레미스의 한계",
+    "title": "온프레미스의 한계",
+    "next_question": "그럼 서버를 직접 사지 않고 빌려 쓸 수 있을까?",
+    "thread": "",
+    "published_at": "2026-09-18T11:40:58.215333+09:00",
+    "image_file": "slide1_온프레미스의_한계_20260918_114008.png",
+    "post_id": "18107606447167956",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1___________20260918_114008.png"
   }
 ]
