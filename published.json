@@ -108,5 +108,15 @@
     "image_file": "slide1_클라우드_컴퓨팅_20260919_002310.png",
     "post_id": "17913558579454182",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________20260919_002310.png"
+  },
+  {
+    "topic": "IaaS·PaaS·SaaS",
+    "title": "IaaS·PaaS·SaaS",
+    "next_question": "퍼블릭, 프라이빗, 하이브리드 — 어떤 클라우드를 선택해야 할까?",
+    "thread": "",
+    "published_at": "2026-09-19T11:40:25.942823+09:00",
+    "image_file": "slide1_IaaS_PaaS_SaaS_20260919_113937.png",
+    "post_id": "18122151664807368",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_IaaS_PaaS_SaaS_20260919_113937.png"
   }
 ]
