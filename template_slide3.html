@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { width: 1080px; height: 1080px; overflow: hidden; }
-    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; background: #FFFFFF; }
+    html, body { width: 1080px; height: 1080px; overflow: hidden; background: #FFFFFF; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; }
 
     .card {
       width: 1080px;
@@ -16,113 +16,128 @@
       background: #FFFFFF;
       display: flex;
       flex-direction: column;
-      overflow: hidden;
     }
 
-    /* ── 상단 바 ── */
+    /* 상단 바 */
     .top-bar {
       height: 72px;
       flex-shrink: 0;
-      background: linear-gradient(135deg, #3730A3 0%, #4F46E5 60%, #7C3AED 100%);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 120px;
+      padding: 0 100px;
+      border-bottom: 2px solid #F1F5F9;
     }
-    .top-left { display: flex; align-items: center; gap: 14px; }
+
     .category-chip {
-      font-size: 13px; font-weight: 700;
-      color: rgba(255,255,255,0.95);
-      background: rgba(255,255,255,0.16);
-      border: 1px solid rgba(255,255,255,0.25);
-      border-radius: 6px;
-      padding: 5px 16px;
-      letter-spacing: 0.03em;
-    }
-    .top-title {
-      font-size: 16px;
-      font-weight: 700;
-      color: rgba(255,255,255,0.60);
-    }
-    .slide-dots { display: flex; gap: 8px; align-items: center; }
-    .dot { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,0.30); }
-    .dot.active { background: #FFFFFF; width: 26px; border-radius: 5px; }
-
-    /* ── 섹션 헤더 ── */
-    .section-header {
-      padding: 38px 120px 26px;
-      flex-shrink: 0;
-    }
-    .section-eyebrow {
-      font-size: 12px;
-      font-weight: 700;
-      color: #94A3B8;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
-    .section-title {
-      font-size: 34px;
-      font-weight: 900;
-      color: #0F172A;
-      letter-spacing: -0.02em;
-      display: flex;
-      align-items: center;
-      gap: 12px;
-    }
-    /* 제목 옆 강조선 */
-    .section-title::after {
-      content: '';
-      flex: 1;
-      height: 3px;
-      border-radius: 2px;
-      background: linear-gradient(90deg, #4F46E5 0%, rgba(124,58,237,0.0) 100%);
-    }
-
-    /* ── 스토리 카드 ── */
-    .story-container {
-      flex: 1;
-      margin: 0 100px;
-      background: #F8FAFC;
-      border: 1.5px solid #E2E8F0;
-      border-radius: 22px;
-      padding: 42px 54px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      overflow: hidden;
-      min-height: 0;
-    }
-    .story-text {
-      font-size: 27px;
-      font-weight: 500;
-      color: #1E293B;
-      line-height: 1.82;
-      word-break: keep-all;
-    }
-    /* 색상 강조 키워드 */
-    .story-text em.blue   { color: #4F46E5; font-style: normal; font-weight: 700; }
-    .story-text em.green  { color: #059669; font-style: normal; font-weight: 700; }
-    .story-text em.orange { color: #EA580C; font-style: normal; font-weight: 700; }
-    .story-text em.red    { color: #DC2626; font-style: normal; font-weight: 700; }
-
-    /* ── 태그 푸터 ── */
-    .footer {
-      padding: 20px 120px 28px;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-    }
-    .tags { display: flex; flex-wrap: wrap; gap: 8px; }
-    .tag {
-      font-size: 15px;
+      font-size: 14px;
       font-weight: 700;
       color: #4F46E5;
       background: #EEF2FF;
       border-radius: 100px;
-      padding: 5px 17px;
+      padding: 7px 20px;
     }
+
+    .slide-dots { display: flex; gap: 9px; align-items: center; }
+    .dot { width: 9px; height: 9px; border-radius: 50%; background: #E2E8F0; }
+    .dot.active { background: #4F46E5; width: 26px; border-radius: 5px; }
+
+    /* 메인 콘텐츠 */
+    .content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 52px 100px 44px;
+      gap: 0;
+    }
+
+    /* 상단 레이블 */
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 700;
+      color: #4F46E5;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-bottom: 18px;
+    }
+
+    /* 핵심 개념 제목 */
+    .concept-title {
+      font-size: 52px;
+      font-weight: 900;
+      color: #0F172A;
+      letter-spacing: -0.03em;
+      line-height: 1.2;
+      word-break: keep-all;
+      margin-bottom: 32px;
+    }
+
+    /* 구분선 */
+    .divider {
+      width: 100%;
+      height: 2px;
+      background: #E2E8F0;
+      margin-bottom: 32px;
+      flex-shrink: 0;
+    }
+
+    /* 왜 중요한가 */
+    .why-label {
+      font-size: 13px;
+      font-weight: 700;
+      color: #94A3B8;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 14px;
+    }
+
+    .why-text {
+      font-size: 22px;
+      font-weight: 700;
+      color: #4F46E5;
+      line-height: 1.45;
+      word-break: keep-all;
+      margin-bottom: 28px;
+    }
+
+    /* 상세 설명 박스 */
+    .detail-box {
+      flex: 1;
+      background: #F8FAFC;
+      border: 1.5px solid #E2E8F0;
+      border-radius: 20px;
+      border-left: 5px solid #4F46E5;
+      padding: 32px 36px;
+      display: flex;
+      align-items: center;
+    }
+
+    .detail-text {
+      font-size: 21px;
+      font-weight: 500;
+      color: #1E293B;
+      line-height: 1.75;
+      word-break: keep-all;
+    }
+
+    /* 하단 */
+    .bottom-bar {
+      height: 56px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 100px;
+      border-top: 2px solid #F1F5F9;
+    }
+
+    .tags { display: flex; gap: 10px; }
+    .tag {
+      font-size: 13px;
+      font-weight: 700;
+      color: #94A3B8;
+    }
+
     .brand {
       font-size: 13px;
       font-weight: 700;
@@ -135,10 +150,7 @@
   <div class="card">
 
     <div class="top-bar">
-      <div class="top-left">
-        <span class="category-chip">{{ category }}</span>
-        <span class="top-title">{{ title }}</span>
-      </div>
+      <span class="category-chip">{{ category }}</span>
       <div class="slide-dots">
         <div class="dot"></div>
         <div class="dot"></div>
@@ -146,18 +158,20 @@
       </div>
     </div>
 
-    <div class="section-header">
-      <div class="section-eyebrow">PRACTICAL USE</div>
-      <div class="section-title">💼 실무에서는 이렇게 씁니다</div>
+    <div class="content">
+      <div class="eyebrow">이것만큼은 꼭 잡고 가세요</div>
+      <div class="concept-title">{{ key_concept.subject }}</div>
+      <div class="divider"></div>
+      <div class="why-label">왜 이게 제일 중요한가</div>
+      <div class="why-text">{{ key_concept.why }}</div>
+      <div class="detail-box">
+        <div class="detail-text">{{ key_concept.detail }}</div>
+      </div>
     </div>
 
-    <div class="story-container">
-      <div class="story-text">{{ story | safe }}</div>
-    </div>
-
-    <div class="footer">
+    <div class="bottom-bar">
       <div class="tags">
-        {% for tag in tags %}
+        {% for tag in tags[:3] %}
         <span class="tag">{{ tag }}</span>
         {% endfor %}
       </div>

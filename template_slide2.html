@@ -4,11 +4,11 @@
   <meta charset="UTF-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700;900&display=swap" rel="stylesheet">
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-    html, body { width: 1080px; height: 1080px; overflow: hidden; }
-    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; background: #FFFFFF; }
+    html, body { width: 1080px; height: 1080px; overflow: hidden; background: #FFFFFF; }
+    body { font-family: 'Noto Sans KR', 'Apple SD Gothic Neo', sans-serif; }
 
     .card {
       width: 1080px;
@@ -16,156 +16,101 @@
       background: #FFFFFF;
       display: flex;
       flex-direction: column;
-      overflow: hidden;
     }
 
-    /* ── 상단 바 ── */
     .top-bar {
       height: 72px;
       flex-shrink: 0;
-      background: linear-gradient(135deg, #3730A3 0%, #4F46E5 60%, #7C3AED 100%);
       display: flex;
       align-items: center;
       justify-content: space-between;
-      padding: 0 120px;
+      padding: 0 100px;
+      border-bottom: 2px solid #F1F5F9;
     }
-    .top-left { display: flex; align-items: center; gap: 14px; }
-    .category-chip {
-      font-size: 13px; font-weight: 700;
-      color: rgba(255,255,255,0.95);
-      background: rgba(255,255,255,0.16);
-      border: 1px solid rgba(255,255,255,0.25);
-      border-radius: 6px;
-      padding: 5px 16px;
-    }
-    .top-label {
-      font-size: 16px;
-      font-weight: 700;
-      color: rgba(255,255,255,0.60);
-    }
-    .slide-dots { display: flex; gap: 8px; align-items: center; }
-    .dot { width: 9px; height: 9px; border-radius: 50%; background: rgba(255,255,255,0.30); }
-    .dot.active { background: #FFFFFF; width: 26px; border-radius: 5px; }
 
-    /* ── 콘텐츠 ── */
-    .content {
+    .category-chip {
+      font-size: 14px;
+      font-weight: 700;
+      color: #4F46E5;
+      background: #EEF2FF;
+      border-radius: 100px;
+      padding: 7px 20px;
+    }
+
+    .slide-dots { display: flex; gap: 9px; align-items: center; }
+    .dot { width: 9px; height: 9px; border-radius: 50%; background: #E2E8F0; }
+    .dot.active { background: #4F46E5; width: 26px; border-radius: 5px; }
+
+    .items-section {
       flex: 1;
       display: flex;
       flex-direction: column;
-      padding: 36px 100px 38px;
-      gap: 20px;
-      min-height: 0;
-    }
-
-    /* 개념명 */
-    .concept-title {
-      font-size: 68px;
-      font-weight: 900;
-      color: #0F172A;
-      letter-spacing: -0.04em;
-      line-height: 1.0;
-      flex-shrink: 0;
-    }
-
-    /* 한 줄 정의 */
-    .definition-box {
-      flex-shrink: 0;
-      background: linear-gradient(135deg, #3730A3 0%, #4F46E5 60%, #7C3AED 100%);
-      border-radius: 14px;
-      padding: 18px 28px;
-      display: flex;
-      align-items: center;
-      gap: 18px;
-    }
-    .def-label {
-      font-size: 11px; font-weight: 700;
-      color: rgba(255,255,255,0.50);
-      letter-spacing: 0.20em;
-      text-transform: uppercase;
-      flex-shrink: 0;
-      white-space: nowrap;
-    }
-    .def-divider {
-      width: 1px; height: 26px;
-      background: rgba(255,255,255,0.22);
-      flex-shrink: 0;
-    }
-    .def-text {
-      font-size: 21px; font-weight: 700;
-      color: #FFFFFF;
-      line-height: 1.45;
-      word-break: keep-all;
-    }
-
-    /* 핵심 포인트 섹션 */
-    .points-label {
-      font-size: 12px; font-weight: 700;
-      color: #94A3B8;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
+      padding: 20px 100px;
       gap: 12px;
     }
-    .points-label::after {
-      content: '';
-      flex: 1; height: 1px;
-      background: #E2E8F0;
-    }
 
-    /* 포인트 목록 */
-    .points-list {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-      min-height: 0;
-    }
-
-    /* 개별 포인트 카드 */
-    .point-item {
+    .item {
       flex: 1;
       display: flex;
       align-items: center;
       gap: 22px;
+      padding: 0 28px;
       background: #F8FAFC;
-      border: 1.5px solid #E2E8F0;
-      border-radius: 16px;
-      padding: 22px 28px;
-      border-left: 4px solid #4F46E5;
+      border-radius: 18px;
+      border-left: 5px solid #4F46E5;
     }
-    .point-num {
-      width: 42px; height: 42px;
+
+    .item-num {
+      width: 48px;
+      height: 48px;
       border-radius: 50%;
-      background: linear-gradient(135deg, #4F46E5 0%, #7C3AED 100%);
+      background: #4F46E5;
       color: #FFFFFF;
-      font-size: 17px;
+      font-size: 20px;
       font-weight: 900;
       display: flex;
       align-items: center;
       justify-content: center;
       flex-shrink: 0;
-      margin-top: 2px;
     }
-    .point-body {
+
+    .item-body {
       display: flex;
       flex-direction: column;
-      gap: 6px;
+      gap: 7px;
     }
-    .point-title {
-      font-size: 22px;
+
+    .item-title {
+      font-size: 26px;
       font-weight: 800;
       color: #0F172A;
       letter-spacing: -0.02em;
       line-height: 1.2;
     }
-    .point-desc {
-      font-size: 19px;
+
+    .item-desc {
+      font-size: 17px;
       font-weight: 500;
-      color: #475569;
-      line-height: 1.60;
+      color: #64748B;
+      line-height: 1.55;
       word-break: keep-all;
+    }
+
+    .bottom-bar {
+      height: 52px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding: 0 100px;
+      border-top: 2px solid #F1F5F9;
+    }
+
+    .brand {
+      font-size: 13px;
+      font-weight: 700;
+      color: #CBD5E1;
+      letter-spacing: 0.06em;
     }
   </style>
 </head>
@@ -173,10 +118,7 @@
   <div class="card">
 
     <div class="top-bar">
-      <div class="top-left">
-        <span class="category-chip">{{ category }}</span>
-        <span class="top-label">{{ title }}란?</span>
-      </div>
+      <span class="category-chip">{{ category }}</span>
       <div class="slide-dots">
         <div class="dot"></div>
         <div class="dot active"></div>
@@ -184,31 +126,22 @@
       </div>
     </div>
 
-    <div class="content">
-
-      <div class="concept-title">{{ title }}</div>
-
-      <div class="definition-box">
-        <span class="def-label">한 줄 정의</span>
-        <div class="def-divider"></div>
-        <span class="def-text">{{ definition }}</span>
-      </div>
-
-      <div class="points-label">핵심 기술 포인트</div>
-
-      <div class="points-list">
-        {% for point in points %}
-        <div class="point-item">
-          <div class="point-num">{{ loop.index }}</div>
-          <div class="point-body">
-            <div class="point-title">{{ point.title }}</div>
-            <div class="point-desc">{{ point.desc }}</div>
-          </div>
+    <div class="items-section">
+      {% for item in items %}
+      <div class="item">
+        <div class="item-num">{{ loop.index }}</div>
+        <div class="item-body">
+          <div class="item-title">{{ item.title }}</div>
+          <div class="item-desc">{{ item.desc }}</div>
         </div>
-        {% endfor %}
       </div>
-
+      {% endfor %}
     </div>
+
+    <div class="bottom-bar">
+      <span class="brand">infra.card</span>
+    </div>
+
   </div>
 </body>
 </html>

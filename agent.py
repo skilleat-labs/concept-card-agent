@@ -211,137 +211,33 @@ def select_topic(client: anthropic.Anthropic, forced_topic: str | None = None) -
     return topic
 
 
-# ── 단계 2: 웹 리서치 (최신 Copilot 참고자료 수집) ───────────────────
-
-SEARCH_SOURCES = [
-    "https://techcommunity.microsoft.com/category/microsoft365copilot",
-    "https://support.microsoft.com/ko-kr/copilot",
-    "https://blogs.microsoft.com/blog/category/copilot/",
-]
-
-def fetch_topic_references(topic: str) -> str:
-    """Microsoft 공식 블로그 등에서 주제 관련 최신 내용을 가져와 참고자료 문자열로 반환."""
-    log("RESEARCH", f"참고자료 수집 중: {topic}")
-
-    # 검색 쿼리 구성 (영문으로 더 잘 나옴)
-    query_map = {
-        "Copilot": "Microsoft Copilot tips productivity 2025 2026",
-        "이메일": "Microsoft Copilot email writing tips Outlook",
-        "회의": "Microsoft Copilot Teams meeting summary tips",
-        "Excel": "Microsoft Copilot Excel data analysis tips",
-        "Word": "Microsoft Copilot Word document writing tips",
-        "PPT": "Microsoft Copilot PowerPoint presentation tips",
-        "보고서": "Microsoft Copilot report writing tips Word",
-        "프롬프트": "Microsoft Copilot prompt tips best practices",
-    }
-
-    # 주제에 맞는 쿼리 선택
-    query = f"Microsoft Copilot {topic} tips 2025 2026 site:techcommunity.microsoft.com OR site:blogs.microsoft.com"
-    for keyword, specific_query in query_map.items():
-        if keyword in topic:
-            query = specific_query
-            break
-
-    references = []
-
-    # Microsoft Tech Community RSS 시도
-    rss_urls = [
-        "https://techcommunity.microsoft.com/plugins/custom/microsoft/o365/blog-rss?board=MicrosoftCopilotBlog",
-        "https://www.microsoft.com/en-us/microsoft-365/blog/feed/",
-    ]
-
-    for url in rss_urls:
-        try:
-            resp = requests.get(url, timeout=8, headers={"User-Agent": "Mozilla/5.0"})
-            if resp.status_code == 200:
-                # 간단한 텍스트 추출 (RSS XML에서 title/description)
-                titles = re.findall(r"<title><!\[CDATA\[(.*?)\]\]></title>", resp.text)
-                descs = re.findall(r"<description><!\[CDATA\[(.*?)\]\]></description>", resp.text[:8000])
-                if titles:
-                    snippet = "\n".join(f"- {t}" for t in titles[:5])
-                    references.append(f"[Microsoft 공식 블로그 최신 글]\n{snippet}")
-                    break
-        except Exception:
-            continue
-
-    # 폴백: Microsoft Learn Copilot 페이지
-    if not references:
-        try:
-            resp = requests.get(
-                "https://learn.microsoft.com/ko-kr/copilot/microsoft-365/",
-                timeout=8,
-                headers={"User-Agent": "Mozilla/5.0"}
-            )
-            if resp.status_code == 200:
-                # h2, h3 태그에서 섹션 제목 추출
-                headings = re.findall(r"<h[23][^>]*>(.*?)</h[23]>", resp.text)
-                clean = [re.sub(r"<[^>]+>", "", h).strip() for h in headings if h.strip()][:8]
-                if clean:
-                    references.append(f"[Microsoft Learn - Copilot 공식 문서 섹션]\n" + "\n".join(f"- {h}" for h in clean))
-        except Exception:
-            pass
-
-    if references:
-        result = "\n\n".join(references)
-        log("RESEARCH", f"참고자료 {len(references)}건 수집 완료")
-        return result
-    else:
-        log("RESEARCH", "참고자료 수집 실패 — 프롬프트 기본값 사용")
-        return ""
-
-
 # ── 단계 3: 문안 생성 ─────────────────────────────────────────────────
 
-def write_card_content(client: anthropic.Anthropic, topic: str, references: str = "") -> dict:
-    """카드 문안 생성 — 텍스트와 SVG 다이어그램을 분리 호출."""
-    # ── 1단계: 텍스트 콘텐츠 ──
+def write_card_content(client: anthropic.Anthropic, topic: str) -> dict:
+    """카드 문안 생성 — 공감형 훅 + 리스트 아이템."""
     log("WRITE", f"문안 생성 중: {topic}")
-    prompt_template = load_prompt("write_card.txt")
-    ref_section = f"\n[참고자료 — 아래 내용을 반영해 작성할 것]\n{references}\n" if references else ""
-    prompt = format_prompt(prompt_template, topic=topic) + ref_section
 
-    response_text = call_claude_text(client, prompt)
+    # topics.json에서 카테고리와 아이콘 조회
+    topics = load_json(TOPICS_FILE)
+    topic_obj = next((t for t in topics if isinstance(t, dict) and t.get("topic") == topic), {})
+    category = topic_obj.get("category", "인프라")
+    icon = topic_obj.get("icon", "💡")
+
+    prompt_template = load_prompt("write_card.txt")
+    prompt = format_prompt(prompt_template, topic=topic, category=category)
+
+    response_text = call_claude_text(client, prompt, max_tokens=2048)
     log("WRITE", f"응답 원문 (앞300자): {response_text[:300]!r}")
     content = parse_json_response(response_text)
 
-    required_keys = ["title", "hook", "category", "summary", "definition", "points", "tags"]
+    required_keys = ["hook", "items", "key_concept", "tags"]
     for key in required_keys:
         if key not in content:
             raise ValueError(f"문안 응답에 '{key}' 키 누락: {content}")
 
-    log("WRITE", f"제목: {content['title']} | 카테고리: {content['category']}")
-    log("WRITE", f"정의: {content['definition']}")
-
-    # ── 3단계: 스토리 별도 생성 ──
-    log("WRITE", "스토리 생성 중...")
-    story_prompt = format_prompt(
-        load_prompt("write_story.txt"),
-        topic=content["title"],
-        definition=content["definition"],
-    )
-    raw_story = call_claude_text(client, story_prompt, max_tokens=512).strip()
-    content["story"] = convert_story_markup(raw_story)
-    log("WRITE", f"스토리 생성 완료 ({len(content['story'])}자)")
-
-    # ── 2단계: SVG 다이어그램 ──
-    log("WRITE", "SVG 다이어그램 생성 중...")
-    svg_prompt = format_prompt(
-        load_prompt("draw_diagram.txt"),
-        topic=content["title"],
-        definition=content["definition"],
-    )
-    svg_text = call_claude_text(client, svg_prompt, max_tokens=4096).strip()
-    log("WRITE", f"SVG 원문 길이: {len(svg_text)}자 | 앞부분: {svg_text[:80]!r} | 끝부분: {svg_text[-60:]!r}")
-
-    # SVG 태그만 추출 (greedy — 가장 큰 SVG 블록)
-    svg_match = re.search(r"(<svg[\s\S]*</svg>)", svg_text, re.IGNORECASE)
-    if not svg_match:
-        # </svg> 없으면 직접 닫기 시도
-        if svg_text.startswith("<svg") and not svg_text.rstrip().endswith("</svg>"):
-            svg_text = svg_text + "\n</svg>"
-            svg_match = re.search(r"(<svg[\s\S]*</svg>)", svg_text, re.IGNORECASE)
-    content["diagram_svg"] = svg_match.group(1) if svg_match else "<svg viewBox='0 0 936 380' xmlns='http://www.w3.org/2000/svg' width='936' height='380'></svg>"
-    log("WRITE", f"SVG 추출 완료 ({len(content['diagram_svg'])}자)")
+    content["category"] = category
+    content["icon"] = icon
+    log("WRITE", f"카테고리: {content['category']} | 아이템 수: {len(content.get('items', []))}")
 
     return content
 
@@ -358,14 +254,11 @@ def render_three_slides(content: dict, topic: str, timestamp: str) -> list[Path]
     safe_topic = re.sub(r"[^\w가-힣]", "_", topic)
 
     ctx = dict(
-        title=content["title"],
-        hook=content.get("hook", content["title"]),
+        hook=content.get("hook", ""),
         category=content.get("category", ""),
-        summary=content.get("summary", ""),
-        definition=content.get("definition", ""),
-        points=content.get("points", []),
-        story=content.get("story", ""),
-        diagram_svg=content.get("diagram_svg", ""),
+        icon=content.get("icon", "💡"),
+        items=content.get("items", []),
+        key_concept=content.get("key_concept", {"subject": "", "why": "", "detail": ""}),
         tags=content.get("tags", []),
     )
 
@@ -447,41 +340,23 @@ def apply_fix(content: dict, fix_instruction: str) -> dict:
     """검증 실패 시 fix 지시에 따라 content 자동 수정 (길이 축약)."""
     log("FIX", f"수정 적용 중: {fix_instruction}")
 
-    # 'points'를 줄여야 한다는 지시가 있으면 모든 point 축약
-    if "points" in fix_instruction.lower() or "핵심" in fix_instruction:
-        # 지시에서 목표 글자 수 추출 시도
+    if "items" in fix_instruction.lower() or "아이템" in fix_instruction or "핵심" in fix_instruction:
         char_match = re.search(r"(\d+)\s*자", fix_instruction)
-        if char_match:
-            max_chars = int(char_match.group(1))
-            def _shorten_point(p, n):
-                if isinstance(p, dict):
-                    return {**p, "desc": p["desc"][:n] if len(p.get("desc", "")) > n else p["desc"]}
-                return p[:n] if len(p) > n else p
-            content["points"] = [_shorten_point(p, max_chars) for p in content["points"]]
-        else:
-            def _shorten_point_ratio(p, ratio):
-                if isinstance(p, dict):
-                    return {**p, "desc": shorten_text(p.get("desc", ""), ratio)}
-                return shorten_text(p, ratio)
-            content["points"] = [_shorten_point_ratio(p, 0.8) for p in content["points"]]
+        for item in content.get("items", []):
+            if isinstance(item, dict) and "desc" in item:
+                if char_match:
+                    max_chars = int(char_match.group(1))
+                    item["desc"] = item["desc"][:max_chars]
+                else:
+                    item["desc"] = shorten_text(item["desc"], 0.8)
 
-    # 'summary'를 줄여야 한다는 지시
-    if "summary" in fix_instruction.lower() or "요약" in fix_instruction:
+    if "hook" in fix_instruction.lower() or "훅" in fix_instruction:
         char_match = re.search(r"(\d+)\s*자", fix_instruction)
         if char_match:
             max_chars = int(char_match.group(1))
-            content["summary"] = content["summary"][:max_chars]
+            content["hook"] = content["hook"][:max_chars]
         else:
-            content["summary"] = shorten_text(content["summary"], 0.8)
-
-    # 'title'을 줄여야 한다는 지시
-    if "title" in fix_instruction.lower() or "제목" in fix_instruction:
-        char_match = re.search(r"(\d+)\s*자", fix_instruction)
-        if char_match:
-            max_chars = int(char_match.group(1))
-            content["title"] = content["title"][:max_chars]
-        else:
-            content["title"] = shorten_text(content["title"], 0.8)
+            content["hook"] = shorten_text(content["hook"], 0.8)
 
     return content
 
@@ -569,31 +444,30 @@ def generate_instagram_caption(client: anthropic.Anthropic, content: dict) -> st
     """Claude로 Instagram 캡션 자동 생성."""
     tags = content.get("tags", [])
     hashtags_str = " ".join(f"#{t.lstrip('#')}" for t in tags)
+    items_text = "\n".join(f"- {item.get('title', '')}" for item in content.get("items", []))
 
-    prompt = f"""당신은 인프라/개발 지식을 전달하는 인스타그램 계정 운영자입니다.
-2026년 인스타그램 알고리즘은 공유·리포스트·조회수를 중시합니다.
-아래 개념 카드 내용으로 공유하고 싶어지는 짧고 강렬한 캡션을 작성하세요.
+    prompt = f"""당신은 주니어 개발자 취업을 돕는 인스타그램 계정 운영자입니다.
+아래 카드 내용으로 저장하고 싶어지는 짧고 강렬한 캡션을 작성하세요.
 
-[개념 카드 정보]
-- 제목: {content.get('title', '')}
-- 훅(hook): {content.get('hook', '')}
-- 요약: {content.get('summary', '')}
-- 정의: {content.get('definition', '')}
+[카드 정보]
+- 훅: {content.get('hook', '').replace('<br>', ' ')}
+- 카테고리: {content.get('category', '')}
+- 핵심 포인트:
+{items_text}
 
 [캡션 형식 - 반드시 이 구조를 따르세요]
-1. 첫 줄: 강렬한 훅 문장 (20자 이내, 이모지 1개 포함)
+1. 첫 줄: 강렬한 훅 문장 (20자 이내, 이모지 1개)
 2. 빈 줄
-3. 핵심 인사이트 3가지 (각 줄 한 가지 포인트, 이모지로 시작)
+3. 핵심 포인트 3가지 (각 줄 이모지로 시작)
 4. 빈 줄
-5. "이 내용 아는 개발자 vs 모르는 개발자 — 실무에서 차이가 납니다"
+5. "취준 중이라면 저장해두세요 🔖"
 6. 빈 줄
-7. "💙 팔로우하면 매일 아침 인프라 개념 1개"
+7. "💜 팔로우하면 매일 인프라 지식 1개"
 8. 빈 줄
-9. 해시태그: {hashtags_str} #인프라 #개발자 #백엔드개발 #DevOps
+9. 해시태그: {hashtags_str} #백엔드취업 #개발자취준 #인프라공부
 
 주의사항:
 - **, *, __ 같은 마크다운 문법 절대 사용 금지
-- 전체 캡션 200자 이내로 간결하게
 - 캡션 텍스트만 출력하세요. 설명이나 부가 텍스트 없이."""
 
     msg = client.messages.create(
@@ -690,22 +564,10 @@ def record_published(
     if not isinstance(published, list):
         published = []
 
-    # topics.json에서 next_question 찾기
-    next_question = ""
-    try:
-        all_topics = load_json(TOPICS_FILE)
-        if isinstance(all_topics, list) and all_topics and isinstance(all_topics[0], dict):
-            matched = next((t for t in all_topics if t.get("topic") == topic), None)
-            if matched:
-                next_question = matched.get("next_question", "")
-    except Exception:
-        pass
-
     entry = {
         "topic": topic,
-        "title": content.get("title", ""),
-        "next_question": next_question,
-        "thread": "",
+        "hook": content.get("hook", "").replace("<br>", " "),
+        "category": content.get("category", ""),
         "published_at": datetime.now(KST).isoformat(),
         "image_file": str(image_path.name),
         "post_id": post_id,
@@ -780,11 +642,8 @@ def main() -> None:
         # ── 단계 1: 주제 선택 ──
         topic = select_topic(client, forced_topic=args.topic)
 
-        # ── 단계 2: 웹 리서치 (최신 Copilot 정보 수집) ──
-        references = fetch_topic_references(topic)
-
-        # ── 단계 3: 문안 생성 ──
-        content = write_card_content(client, topic, references)
+        # ── 단계 2: 문안 생성 ──
+        content = write_card_content(client, topic)
 
         # 타임스탬프
         safe_topic = re.sub(r"[^\w가-힣]", "_", topic)

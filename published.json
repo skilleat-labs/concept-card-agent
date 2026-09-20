@@ -138,5 +138,19 @@
     "image_file": "slide1_AWS_핵심_서비스_개요_20260920_115137.png",
     "post_id": "18143443522582117",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_AWS___________20260920_115137.png"
+  },
+  {
+    "topic": "AWS 면접에서 주니어가 가장 많이 틀리는 질문",
+    "hook": "AWS 자격증 땄는데 면접에서 기본 문제를 틀려본 적 있어?",
+    "category": "면접 생존",
+    "published_at": "2026-09-19T17:53:00.116593+09:00",
+    "post_id": "18119477839941650"
+  },
+  {
+    "topic": "Docker 쓴다고 했는데 면접관이 이거 물어보면 망한다",
+    "hook": "Docker 써봤다고 했는데 면접관 질문 하나에 말문이 막혔다",
+    "category": "면접 생존",
+    "published_at": "2026-09-19T18:03:08.700139+09:00",
+    "post_id": "18121706546481514"
   }
 ]
