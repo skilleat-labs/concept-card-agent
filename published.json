@@ -161,5 +161,14 @@
     "image_file": "slide1_면접에서는_본질을_물어보죠__컨테이너_기술_제대로_설명_가능___20260920_123145.png",
     "post_id": "18348150088267015",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_____________________________________20260920_123145.png"
+  },
+  {
+    "topic": "컨테이너 vs VM 차이 설명 못 하면 면접에서 어떻게 보일까",
+    "hook": "컨테이너랑 VM 똑같다고 했다가 면접 5분 만에 끝났다",
+    "category": "면접 생존",
+    "published_at": "2026-09-21T00:03:26.631949+09:00",
+    "image_file": "slide1_컨테이너_vs_VM_차이_설명_못_하면_면접에서_어떻게_보일까_20260921_000233.png",
+    "post_id": "18094591817533058",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1______vs_VM_________________________20260921_000233.png"
   }
 ]
