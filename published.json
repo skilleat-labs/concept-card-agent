@@ -128,5 +128,15 @@
     "image_file": "slide1_퍼블릭_프라이빗_하이브리드_클라우드_20260919_235938.png",
     "post_id": "17902103877584327",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_____________________20260919_235938.png"
+  },
+  {
+    "topic": "AWS 핵심 서비스 개요",
+    "title": "AWS 핵심 서비스",
+    "next_question": "서울 서버와 도쿄 서버는 어떻게 다를까?",
+    "thread": "",
+    "published_at": "2026-09-20T11:52:27.492487+09:00",
+    "image_file": "slide1_AWS_핵심_서비스_개요_20260920_115137.png",
+    "post_id": "18143443522582117",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_AWS___________20260920_115137.png"
   }
 ]
