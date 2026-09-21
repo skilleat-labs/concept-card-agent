@@ -179,5 +179,14 @@
     "image_file": "slide1_포트폴리오에_쿠버네티스_적으면_안_되는_경우_20260921_114820.png",
     "post_id": "17898229890389916",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________________________20260921_114820.png"
+  },
+  {
+    "topic": "CI/CD 구축했다고 했는데 면접관이 이것만 파고들었다",
+    "hook": "CI/CD 구축했다고 했더니 면접관이 이것만 파고들었다",
+    "category": "면접 생존",
+    "published_at": "2026-09-22T02:21:30.770667+09:00",
+    "image_file": "slide1_CI_CD_구축했다고_했는데_면접관이_이것만_파고들었다_20260922_022038.png",
+    "post_id": "17993548821044128",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_CI_CD__________________________20260922_022038.png"
   }
 ]
