@@ -170,5 +170,14 @@
     "image_file": "slide1_컨테이너_vs_VM_차이_설명_못_하면_면접에서_어떻게_보일까_20260921_000233.png",
     "post_id": "18094591817533058",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1______vs_VM_________________________20260921_000233.png"
+  },
+  {
+    "topic": "포트폴리오에 쿠버네티스 적으면 안 되는 경우",
+    "hook": "쿠버네티스 적었더니 면접관 눈빛이 싸늘해졌다",
+    "category": "면접 생존",
+    "published_at": "2026-09-21T11:49:11.153031+09:00",
+    "image_file": "slide1_포트폴리오에_쿠버네티스_적으면_안_되는_경우_20260921_114820.png",
+    "post_id": "17898229890389916",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________________________20260921_114820.png"
   }
 ]
