@@ -251,5 +251,14 @@
     "image_file": "slide1_인프라_없이_혼자_개발하면_생기는_나쁜_습관들_20260925_115626.png",
     "post_id": "18625113727025834",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1___________________________20260925_115626.png"
+  },
+  {
+    "topic": "학원에서 배운 AWS vs 회사에서 실제로 쓰는 AWS",
+    "hook": "학원선 EC2 하나로 끝났는데 회사엔 그게 없었다",
+    "category": "실무 갭",
+    "published_at": "2026-09-26T01:05:37.482748+09:00",
+    "image_file": "slide1_학원에서_배운_AWS_vs_회사에서_실제로_쓰는_AWS_20260926_010449.png",
+    "post_id": "18391374571204814",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_________AWS_vs_____________AWS_20260926_010449.png"
   }
 ]
