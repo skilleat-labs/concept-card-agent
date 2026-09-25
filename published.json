@@ -242,5 +242,14 @@
     "image_file": "slide1_개발만_공부했는데_백엔드_면접에서_인프라_질문이_나왔다_20260925_010422.png",
     "post_id": "18477460693119374",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1________________________________20260925_010422.png"
+  },
+  {
+    "topic": "인프라 없이 혼자 개발하면 생기는 나쁜 습관들",
+    "hook": "혼자 만든 포폴, 실무에선 위험 신호였다",
+    "category": "취준 실수",
+    "published_at": "2026-09-25T11:57:13.663021+09:00",
+    "image_file": "slide1_인프라_없이_혼자_개발하면_생기는_나쁜_습관들_20260925_115626.png",
+    "post_id": "18625113727025834",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1___________________________20260925_115626.png"
   }
 ]
