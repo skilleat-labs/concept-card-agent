@@ -269,5 +269,14 @@
     "image_file": "slide1_주니어_입사_첫날_아무도_안_알려주는_인프라_상식_20260926_115938.png",
     "post_id": "18124099250486827",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_____________________________20260926_115938.png"
+  },
+  {
+    "topic": "취업하고 나서야 알게 된 Docker의 진실",
+    "hook": "Docker 공부 열심히 했는데 실무 첫날 아무것도 몰랐다",
+    "category": "실무 갭",
+    "published_at": "2026-09-27T00:19:35.828800+09:00",
+    "image_file": "slide1_취업하고_나서야_알게_된_Docker의_진실_20260927_001841.png",
+    "post_id": "18410336632083475",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_______________Docker_____20260927_001841.png"
   }
 ]
