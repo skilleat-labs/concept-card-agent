@@ -495,7 +495,7 @@ def publish_carousel_to_instagram(image_urls: list[str], content: dict) -> str:
     if not ig_access_token:
         raise ValueError("환경변수 IG_ACCESS_TOKEN 미설정")
 
-    base_url = f"https://graph.facebook.com/v21.0/{ig_user_id}"
+    base_url = f"https://graph.instagram.com/v21.0/{ig_user_id}"
     caption = content.get("caption", f"{content.get('title', '')}\n\n{content.get('summary', '')}")
 
     # 1단계: 각 이미지 개별 미디어 컨테이너 생성
