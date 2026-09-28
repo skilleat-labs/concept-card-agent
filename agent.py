@@ -8,6 +8,7 @@ import base64
 import json
 import os
 import re
+import subprocess
 import sys
 import tempfile
 from datetime import datetime, timezone, timedelta
@@ -691,7 +692,6 @@ def main() -> None:
         print("=" * 60)
 
         # Mac 알림 (macOS에서만 실행)
-        import sys, subprocess
         if sys.platform == "darwin":
             subprocess.run([
                 "osascript", "-e",
