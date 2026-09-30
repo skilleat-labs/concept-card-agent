@@ -323,5 +323,14 @@
     "image_file": "slide1_DevOps_모르는_백엔드_vs_아는_백엔드의_현실_차이_20260930_021154.png",
     "post_id": "18040655936834577",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_DevOps_________vs_______________20260930_021154.png"
+  },
+  {
+    "topic": "혼자 개발할 때와 팀에서 배포할 때가 이렇게 다를 줄 몰랐다",
+    "hook": "혼자 배포는 됐는데 팀에선 왜 난리가 났을까",
+    "category": "실무 갭",
+    "published_at": "2026-09-30T12:30:13.795092+09:00",
+    "image_file": "slide1_혼자_개발할_때와_팀에서_배포할_때가_이렇게_다를_줄_몰랐다_20260930_122921.png",
+    "post_id": "18338323696260259",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1___________________________________20260930_122921.png"
   }
 ]
