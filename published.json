@@ -341,5 +341,14 @@
     "image_file": "slide1_주소창에_URL_치면_생기는_일__면접에서_어디까지_말할_수_있나_20261010_151330.png",
     "post_id": "18153418996533618",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1______URL_____________________________20261010_151330.png"
+  },
+  {
+    "topic": "깃허브에 API 키 올렸다가 생기는 일",
+    "hook": "깃허브에 API 키 올린 순간부터 요금 폭탄 시작됨",
+    "category": "취준 실수",
+    "published_at": "2026-10-11T01:32:41.259478+09:00",
+    "image_file": "slide1_깃허브에_API_키_올렸다가_생기는_일_20261011_013158.png",
+    "post_id": "18126704731836014",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1______API______________20261011_013158.png"
   }
 ]
