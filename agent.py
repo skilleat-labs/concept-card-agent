@@ -36,6 +36,10 @@ PROMPTS_DIR = BASE_DIR / "prompts"
 
 MODEL = "claude-sonnet-4-6"
 MAX_RETRIES = 3
+REFILL_THRESHOLD = 6   # 남은 주제가 이보다 적으면 자동 보충 (하루 2회 발행 → 약 3일 여유)
+REFILL_COUNT = 24      # 한 번에 보충할 주제 수 (약 12일 치)
+REFILL_ATTEMPTS = 3    # 겹침으로 모자라면 다시 요청하는 횟수
+SIMILAR_LIMIT = 0.45   # 기존 주제와 제목 유사도가 이 이상이면 겹친다고 보고 버림
 CARD_WIDTH = 1080
 CARD_HEIGHT = 1080  # 1:1 정사각형
 
@@ -118,6 +122,23 @@ def parse_json_response(text: str) -> dict:
     raise ValueError(f"JSON 파싱 실패\n원문: {text[:300]}")
 
 
+def parse_json_list(text: str) -> list:
+    """Claude 응답에서 JSON 배열 전체를 파싱(parse_json_response는 배열의 첫 요소만 돌려주므로 따로 둔다)."""
+    cleaned = strip_markdown_json(text)
+    for candidate in (cleaned, (re.search(r"\[[\s\S]*\]", cleaned) or [None])[0]):
+        if not candidate:
+            continue
+        try:
+            result = json.loads(candidate)
+        except json.JSONDecodeError:
+            continue
+        if isinstance(result, list):
+            return result
+        if isinstance(result, dict) and isinstance(result.get("topics"), list):
+            return result["topics"]
+    raise ValueError(f"JSON 배열 파싱 실패\n원문: {text[:300]}")
+
+
 def convert_story_markup(text: str) -> str:
     """[blue]...[/blue] 등의 마커를 HTML <em> 태그로 변환."""
     for color in ("blue", "green", "orange", "red"):
@@ -178,37 +199,119 @@ def call_claude_vision(client: anthropic.Anthropic, prompt: str, image_path: Pat
 
 # ── 단계 1: 주제 선택 ─────────────────────────────────────────────────
 
+def _norm(text: str) -> str:
+    return re.sub(r"[^0-9a-z가-힣]", "", text.lower())
+
+
+def _similar(a: str, b: str) -> float:
+    """두 제목의 글자 2-gram 자카드 유사도(0~1)."""
+    a, b = _norm(a), _norm(b)
+    ga = {a[i:i + 2] for i in range(len(a) - 1)}
+    gb = {b[i:i + 2] for i in range(len(b) - 1)}
+    return len(ga & gb) / len(ga | gb) if ga | gb else 0.0
+
+
+def refill_topics(client: anthropic.Anthropic, topics: list, published_topics: list[str]) -> int:
+    """남은 주제가 부족하면 Claude로 새 주제를 만들어 topics.json 끝에 추가한다. 추가한 개수를 반환.
+
+    겹침 검사는 코드로 한다: 기존 주제·발행 이력·이번에 만든 주제끼리 완전 일치 또는 유사도 SIMILAR_LIMIT 이상이면 버린다.
+    """
+    existing = list(dict.fromkeys([t["topic"] for t in topics] + published_topics))
+    categories = list(dict.fromkeys(t["category"] for t in topics)) or ["면접 생존", "취준 실수", "실무 갭", "레벨업"]
+    accepted: list[dict] = []
+
+    for attempt in range(1, REFILL_ATTEMPTS + 1):
+        need = REFILL_COUNT - len(accepted)
+        if need <= 0:
+            break
+        log("REFILL", f"새 주제 생성 요청 {need}개 (시도 {attempt}/{REFILL_ATTEMPTS})")
+        prompt = format_prompt(
+            load_prompt("generate_topics.txt"),
+            existing=json.dumps(existing + [a["topic"] for a in accepted], ensure_ascii=False),
+            examples=json.dumps([t["topic"] for t in topics[-8:]], ensure_ascii=False),
+            categories=", ".join(categories),
+            count=need + 6,  # 겹침으로 버려질 몫까지 넉넉히
+        )
+        try:
+            candidates = parse_json_list(call_claude_text(client, prompt, max_tokens=4096))
+        except Exception as e:  # 응답 형식 오류 → 다음 시도
+            log("REFILL", f"응답 해석 실패: {e}")
+            continue
+        batch = []
+        for c in candidates:
+            if not isinstance(c, dict) or not c.get("topic") or c.get("category") not in categories:
+                continue
+            title = c["topic"].strip()
+            pool = existing + [a["topic"] for a in accepted] + [b["topic"] for b in batch]
+            if any(_norm(title) == _norm(p) or _similar(title, p) >= SIMILAR_LIMIT for p in pool):
+                log("REFILL", f"겹쳐서 제외(글자): {title}")
+                continue
+            batch.append({"topic": title, "category": c["category"], "icon": (c.get("icon") or "💡").strip()})
+        # 글자 비교로 못 잡는 '같은 소재 다른 표현'은 Claude 편집자 검토로 거른다
+        if batch:
+            try:
+                drop = set(parse_json_list(call_claude_text(client, format_prompt(
+                    load_prompt("dedupe_topics.txt"),
+                    existing=json.dumps(existing + [a["topic"] for a in accepted], ensure_ascii=False),
+                    candidates="\n".join(f"{i}: {b['topic']}" for i, b in enumerate(batch, 1)),
+                ), max_tokens=512)))
+            except Exception as e:  # 검토가 실패하면 안전하게 이번 묶음을 버리고 다시 요청
+                log("REFILL", f"겹침 검토 실패, 이번 후보는 버림: {e}")
+                continue
+            for i, b in enumerate(batch, 1):
+                if i in drop:
+                    log("REFILL", f"겹쳐서 제외(소재): {b['topic']}")
+                else:
+                    accepted.append(b)
+
+    if not accepted:
+        return 0
+    # 카테고리를 기존 순서대로 번갈아 배치(발행이 id 순서라 한 카테고리만 몰리지 않게)
+    queues = {cat: [a for a in accepted if a["category"] == cat] for cat in categories}
+    ordered = []
+    while any(queues.values()):
+        for cat in categories:
+            if queues[cat]:
+                ordered.append(queues[cat].pop(0))
+    next_id = max((t["id"] for t in topics), default=0) + 1
+    for i, a in enumerate(ordered[:REFILL_COUNT]):
+        topics.append({"id": next_id + i, **a})
+    save_json(TOPICS_FILE, topics)
+    added = min(len(ordered), REFILL_COUNT)
+    log("REFILL", f"✅ 새 주제 {added}개 추가 (id {next_id}~{next_id + added - 1}) → topics.json 총 {len(topics)}개")
+    return added
+
+
 def select_topic(client: anthropic.Anthropic, forced_topic: str | None = None) -> str:
-    """발행할 주제 선택. forced_topic 지정 시 그대로 사용."""
+    """발행할 주제 선택. forced_topic 지정 시 그대로 사용.
+
+    규칙: 아직 발행하지 않은 주제 중 id가 가장 낮은 것(코드로 결정 — API 호출 없음).
+    남은 주제가 REFILL_THRESHOLD개 미만이면 먼저 자동 보충한다. 보충 후에도 없으면 실패로 끝낸다(이슈 생성).
+    """
     if forced_topic:
         log("SELECT", f"주제 강제 지정: {forced_topic}")
         return forced_topic
 
     log("SELECT", "주제 선택 중...")
-    topics = load_json(TOPICS_FILE)
+    topics = [t for t in load_json(TOPICS_FILE) if isinstance(t, dict)]
     published = load_json(PUBLISHED_FILE)
     published_topics = [entry["topic"] for entry in published] if published else []
 
-    prompt_template = load_prompt("select_topic.txt")
-    prompt = format_prompt(
-        prompt_template,
-        published=json.dumps(published_topics, ensure_ascii=False),
-        topics=json.dumps(topics, ensure_ascii=False),
-    )
+    remaining = [t for t in topics if t["topic"] not in published_topics]
+    log("SELECT", f"남은 주제 {len(remaining)}개 / 전체 {len(topics)}개")
+    if len(remaining) < REFILL_THRESHOLD:
+        log("REFILL", f"남은 주제가 {REFILL_THRESHOLD}개 미만 — 자동 보충 시작")
+        try:
+            refill_topics(client, topics, published_topics)
+        except Exception as e:
+            log("REFILL", f"⚠️  자동 보충 실패: {e}")
+        remaining = [t for t in topics if t["topic"] not in published_topics]
 
-    response_text = call_claude_text(client, prompt)
-    result = parse_json_response(response_text)
-    topic = result["topic"]
-    reason = result.get("reason", "")
+    if not remaining:
+        raise RuntimeError("주제 소진 — 자동 보충에도 실패해 발행할 주제가 없습니다. topics.json을 확인하세요.")
 
-    # 주제 소진 감지: Claude가 유효한 topic을 반환하지 못한 경우
-    all_topic_names = [t["topic"] for t in topics if isinstance(t, dict)]
-    if topic not in all_topic_names:
-        log("SELECT", f"⚠️  전체 주제 소진 — 발행 가능한 새 주제가 없습니다. 에이전트를 종료합니다.")
-        sys.exit(0)
-
+    topic = min(remaining, key=lambda t: t["id"])["topic"]
     log("SELECT", f"선택된 주제: {topic}")
-    log("SELECT", f"선택 이유: {reason}")
     return topic
 
 
