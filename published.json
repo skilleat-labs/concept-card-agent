@@ -350,5 +350,14 @@
     "image_file": "slide1_깃허브에_API_키_올렸다가_생기는_일_20261011_013158.png",
     "post_id": "18126704731836014",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1______API______________20261011_013158.png"
+  },
+  {
+    "topic": "회사에서는 서버에 직접 접속하지 않는 이유",
+    "hook": "학원에선 ssh로 바로 접속했는데 회사에선 왜 막혀있지?",
+    "category": "실무 갭",
+    "published_at": "2026-10-11T12:23:18.969097+09:00",
+    "image_file": "slide1_회사에서는_서버에_직접_접속하지_않는_이유_20261011_122235.png",
+    "post_id": "18342035530259436",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_________________________20261011_122235.png"
   }
 ]
