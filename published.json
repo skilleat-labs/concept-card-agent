@@ -359,5 +359,14 @@
     "image_file": "slide1_회사에서는_서버에_직접_접속하지_않는_이유_20261011_122235.png",
     "post_id": "18342035530259436",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_________________________20261011_122235.png"
+  },
+  {
+    "topic": "Terraform 같은 IaC를 주니어 때 알아두면 좋은 이유",
+    "hook": "클릭 한 번으로 서버 10대를 날려버린 이유",
+    "category": "레벨업",
+    "published_at": "2026-10-21T11:53:11.666727+09:00",
+    "image_file": "slide1_Terraform_같은_IaC를_주니어_때_알아두면_좋은_이유_20261021_115226.png",
+    "post_id": "18642572032018298",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_Terraform____IaC___________________20261021_115226.png"
   }
 ]
