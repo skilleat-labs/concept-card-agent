@@ -368,5 +368,14 @@
     "image_file": "slide1_Terraform_같은_IaC를_주니어_때_알아두면_좋은_이유_20261021_115226.png",
     "post_id": "18642572032018298",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_Terraform____IaC___________________20261021_115226.png"
+  },
+  {
+    "topic": "로드밸런서 L4 vs L7 차이 물어보면 말문이 막히는 이유",
+    "hook": "L4/L7 차이 물었더니 OSI 모델만 줄줄 외웠다",
+    "category": "면접 생존",
+    "published_at": "2026-10-22T01:16:22.933055+09:00",
+    "image_file": "slide1_로드밸런서_L4_vs_L7_차이_물어보면_말문이_막히는_이유_20261022_011532.png",
+    "post_id": "18058286429568570",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_______L4_vs_L7____________________20261022_011532.png"
   }
 ]
