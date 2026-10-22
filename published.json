@@ -386,5 +386,14 @@
     "image_file": "slide1_README_없는_포트폴리오가_서류에서_밀리는_이유_20261022_115123.png",
     "post_id": "17952731907278826",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_README_______________________20261022_115123.png"
+  },
+  {
+    "topic": "print로 로그 찍던 습관이 실무에서 문제 되는 이유",
+    "hook": "print 찍으면서 디버깅했던 나, 실무선 민폐였다",
+    "category": "실무 갭",
+    "published_at": "2026-10-23T01:14:43.789471+09:00",
+    "image_file": "slide1_print로_로그_찍던_습관이_실무에서_문제_되는_이유_20261023_011402.png",
+    "post_id": "18111193070353790",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_print__________________________20261023_011402.png"
   }
 ]
