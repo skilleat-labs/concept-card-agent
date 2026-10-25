@@ -440,5 +440,14 @@
     "image_file": "slide1_AI_시대에_인프라_지식이_오히려_더_중요해지는_이유_20261025_114353.png",
     "post_id": "18126356203671553",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_AI____________________________20261025_114353.png"
+  },
+  {
+    "topic": "쿠버네티스 Pod가 죽으면 무슨 일이 일어나냐는 질문",
+    "hook": "Pod 죽었어요 그래서요? 라고 물어봤을 때",
+    "category": "면접 생존",
+    "published_at": "2026-10-26T00:13:02.743905+09:00",
+    "image_file": "slide1_쿠버네티스_Pod가_죽으면_무슨_일이_일어나냐는_질문_20261026_001217.png",
+    "post_id": "17996634639046896",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_______Pod_____________________20261026_001217.png"
   }
 ]
