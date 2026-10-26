@@ -449,5 +449,14 @@
     "image_file": "slide1_쿠버네티스_Pod가_죽으면_무슨_일이_일어나냐는_질문_20261026_001217.png",
     "post_id": "17996634639046896",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_______Pod_____________________20261026_001217.png"
+  },
+  {
+    "topic": "리눅스 명령어 몰라서 첫 과제에서 막히는 순간",
+    "hook": "ls도 모르는데 과제는 이미 시작됐다",
+    "category": "취준 실수",
+    "published_at": "2026-10-26T11:42:32.041370+09:00",
+    "image_file": "slide1_리눅스_명령어_몰라서_첫_과제에서_막히는_순간_20261026_114148.png",
+    "post_id": "17950053666341348",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1___________________________20261026_114148.png"
   }
 ]
