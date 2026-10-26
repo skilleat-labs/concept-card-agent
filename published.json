@@ -458,5 +458,14 @@
     "image_file": "slide1_리눅스_명령어_몰라서_첫_과제에서_막히는_순간_20261026_114148.png",
     "post_id": "17950053666341348",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1___________________________20261026_114148.png"
+  },
+  {
+    "topic": "운영 DB에 직접 쿼리 날리면 안 되는 이유",
+    "hook": "운영 DB에 직접 쿼리 쳤다가 서비스 터뜨린 썰",
+    "category": "실무 갭",
+    "published_at": "2026-10-27T02:50:01.351323+09:00",
+    "image_file": "slide1_운영_DB에_직접_쿼리_날리면_안_되는_이유_20261027_024918.png",
+    "post_id": "18111474275581874",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____DB____________________20261027_024918.png"
   }
 ]
