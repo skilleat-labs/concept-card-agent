@@ -467,5 +467,14 @@
     "image_file": "slide1_운영_DB에_직접_쿼리_날리면_안_되는_이유_20261027_024918.png",
     "post_id": "18111474275581874",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____DB____________________20261027_024918.png"
+  },
+  {
+    "topic": "컨테이너 이미지 크기를 줄일 줄 아는 개발자가 다른 이유",
+    "hook": "이미지 1GB짜리 올리고 왜 배포가 느리냐고 물어본 적 있어?",
+    "category": "레벨업",
+    "published_at": "2026-10-27T12:17:17.666714+09:00",
+    "image_file": "slide1_컨테이너_이미지_크기를_줄일_줄_아는_개발자가_다른_이유_20261027_121632.png",
+    "post_id": "17941455651372051",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_________________________________20261027_121632.png"
   }
 ]
