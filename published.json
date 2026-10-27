@@ -476,5 +476,14 @@
     "image_file": "slide1_컨테이너_이미지_크기를_줄일_줄_아는_개발자가_다른_이유_20261027_121632.png",
     "post_id": "17941455651372051",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_________________________________20261027_121632.png"
+  },
+  {
+    "topic": "Stateless 서버가 왜 중요하냐는 질문의 진짜 의도",
+    "hook": "Stateless가 뭔지 대답했는데 왜 떨어진 걸까",
+    "category": "면접 생존",
+    "published_at": "2026-10-28T02:00:11.250605+09:00",
+    "image_file": "slide1_Stateless_서버가_왜_중요하냐는_질문의_진짜_의도_20261028_015913.png",
+    "post_id": "17954581221326654",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_Stateless_______________________20261028_015913.png"
   }
 ]
