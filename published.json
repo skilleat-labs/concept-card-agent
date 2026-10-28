@@ -485,5 +485,14 @@
     "image_file": "slide1_Stateless_서버가_왜_중요하냐는_질문의_진짜_의도_20261028_015913.png",
     "post_id": "17954581221326654",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_Stateless_______________________20261028_015913.png"
+  },
+  {
+    "topic": "코딩테스트만 준비하고 네트워크 기초를 버린 결과",
+    "hook": "코테 200문제 풀었는데 TCP/IP 하나에 면접 끝났다",
+    "category": "취준 실수",
+    "published_at": "2026-10-29T02:35:23.935764+09:00",
+    "image_file": "slide1_코딩테스트만_준비하고_네트워크_기초를_버린_결과_20261029_023438.png",
+    "post_id": "18109803962212329",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____________________________20261029_023438.png"
   }
 ]
