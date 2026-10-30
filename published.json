@@ -512,5 +512,14 @@
     "image_file": "slide1_최소_권한_원칙을_아는_주니어가_눈에_띄는_이유_20261030_024429.png",
     "post_id": "18640715437002366",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____________________________20261030_024429.png"
+  },
+  {
+    "topic": "시크릿 관리 질문에 '.env에 넣었어요'라고 답하면 생기는 일",
+    "hook": "'.env에",
+    "category": "면접 생존",
+    "published_at": "2026-10-30T12:56:48.987106+09:00",
+    "image_file": "slide1_시크릿_관리_질문에___env에_넣었어요_라고_답하면_생기는_일_20261030_125521.png",
+    "post_id": "18110148458631167",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1______________env____________________20261030_125521.png"
   }
 ]
