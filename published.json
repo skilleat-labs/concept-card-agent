@@ -539,5 +539,14 @@
     "image_file": "slide1_dev_stg_prod_환경을_왜_따로_나눌까_20261031_123947.png",
     "post_id": "18097677458660669",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_dev_stg_prod______________20261031_123947.png"
+  },
+  {
+    "topic": "MSA 하기 전에 알아야 할 인프라 현실",
+    "hook": "MSA 한다고 했다가 인프라 몰라서 면접 폭망했다",
+    "category": "레벨업",
+    "published_at": "2026-11-01T01:28:41.274115+09:00",
+    "image_file": "slide1_MSA_하기_전에_알아야_할_인프라_현실_20261101_012758.png",
+    "post_id": "17973502284177187",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_MSA____________________20261101_012758.png"
   }
 ]
