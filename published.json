@@ -530,5 +530,14 @@
     "image_file": "slide1_튜토리얼_따라_한_글만_있는_기술_블로그의_함정_20261031_022456.png",
     "post_id": "17909570202332984",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____________________________20261031_022456.png"
+  },
+  {
+    "topic": "dev·stg·prod 환경을 왜 따로 나눌까",
+    "hook": "prod에 바로 배포했다가 서비스 터뜨린 사람 나만 아니었으면 좋겠다",
+    "category": "실무 갭",
+    "published_at": "2026-10-31T12:40:33.480636+09:00",
+    "image_file": "slide1_dev_stg_prod_환경을_왜_따로_나눌까_20261031_123947.png",
+    "post_id": "18097677458660669",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_dev_stg_prod______________20261031_123947.png"
   }
 ]
