@@ -584,5 +584,14 @@
     "image_file": "slide1_CDN과_캐시를_이해하면_성능_질문이_쉬워지는_이유_20261103_060005.png",
     "post_id": "17989776339120329",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_CDN__________________________20261103_060005.png"
+  },
+  {
+    "topic": "블루그린 vs 카나리 배포, 면접관이 이렇게 물어본다",
+    "hook": "블루그린이요? 카나리요? 둘 다 안다고 했다가 말문 막혀본 적 있지?",
+    "category": "면접 생존",
+    "published_at": "2026-11-03T13:55:21.994243+09:00",
+    "image_file": "slide1_블루그린_vs_카나리_배포__면접관이_이렇게_물어본다_20261103_135413.png",
+    "post_id": "18081432404709609",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1______vs_______________________20261103_135413.png"
   }
 ]
