@@ -602,5 +602,14 @@
     "image_file": "slide1_사이드_프로젝트를_끝까지_운영해_본_적_없는_게_티_나는_순간_20261104_034624.png",
     "post_id": "18656686900042284",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____________________________________20261104_034624.png"
+  },
+  {
+    "topic": "코드 리뷰에서 설정 파일까지 꼼꼼히 보는 이유",
+    "hook": "설정 파일 한 줄이 서비스 전체를 날려버린다",
+    "category": "실무 갭",
+    "published_at": "2026-11-04T13:24:11.440786+09:00",
+    "image_file": "slide1_코드_리뷰에서_설정_파일까지_꼼꼼히_보는_이유_20261104_132315.png",
+    "post_id": "17991311631070254",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1___________________________20261104_132315.png"
   }
 ]
