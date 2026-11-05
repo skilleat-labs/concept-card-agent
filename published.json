@@ -629,5 +629,14 @@
     "image_file": "slide1_서브넷_마스크_질문에_그냥_웃고_넘긴_면접_후기_20261105_134018.png",
     "post_id": "18135875743781430",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____________________________20261105_134018.png"
+  },
+  {
+    "topic": "SSH 키 없이 비밀번호로 서버 접속하면 생기는 일",
+    "hook": "비밀번호로 서버 들어갔다가 면접에서 다 들켜버린 얘기",
+    "category": "취준 실수",
+    "published_at": "2026-11-06T04:12:52.849596+09:00",
+    "image_file": "slide1_SSH_키_없이_비밀번호로_서버_접속하면_생기는_일_20261106_041207.png",
+    "post_id": "18113324999149108",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_SSH__________________________20261106_041207.png"
   }
 ]
