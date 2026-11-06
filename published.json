@@ -638,5 +638,14 @@
     "image_file": "slide1_SSH_키_없이_비밀번호로_서버_접속하면_생기는_일_20261106_041207.png",
     "post_id": "18113324999149108",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_SSH__________________________20261106_041207.png"
+  },
+  {
+    "topic": "메모리 누수가 뭔지 모르고 서버 재시작으로만 버틴 경험",
+    "hook": "서버가 느려지면 재시작이 답인 줄 알았던 그 시절",
+    "category": "실무 갭",
+    "published_at": "2026-11-06T13:40:35.317184+09:00",
+    "image_file": "slide1_메모리_누수가_뭔지_모르고_서버_재시작으로만_버틴_경험_20261106_133948.png",
+    "post_id": "18100857812431064",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1________________________________20261106_133948.png"
   }
 ]
