@@ -647,5 +647,14 @@
     "image_file": "slide1_메모리_누수가_뭔지_모르고_서버_재시작으로만_버틴_경험_20261106_133948.png",
     "post_id": "18100857812431064",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1________________________________20261106_133948.png"
+  },
+  {
+    "topic": "컨테이너 헬스체크 설정 안 하면 실무에서 벌어지는 일",
+    "hook": "컨테이너가 죽었는데 트래픽은 계속 들어오고 있었다",
+    "category": "레벨업",
+    "published_at": "2026-11-07T03:39:48.379811+09:00",
+    "image_file": "slide1_컨테이너_헬스체크_설정_안_하면_실무에서_벌어지는_일_20261107_033904.png",
+    "post_id": "18139172437733280",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_______________________________20261107_033904.png"
   }
 ]
