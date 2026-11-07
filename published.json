@@ -665,5 +665,14 @@
     "image_file": "slide1_cron_job_쓴다고_이력서에_썼는데_타임존_질문에_막힌_순간_20261107_130459.png",
     "post_id": "17971991115177921",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_cron_job____________________________20261107_130459.png"
+  },
+  {
+    "topic": "NAT 게이트웨이가 뭔지 모르고 VPC 구성했다고 쓴 결과",
+    "hook": "NAT 게이트웨이 없이 VPC 구성했다고 자신 있게 썼다",
+    "category": "취준 실수",
+    "published_at": "2026-11-08T02:08:37.305532+09:00",
+    "image_file": "slide1_NAT_게이트웨이가_뭔지_모르고_VPC_구성했다고_쓴_결과_20261108_020752.png",
+    "post_id": "17912943612302772",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_NAT_______________VPC____________20261108_020752.png"
   }
 ]
