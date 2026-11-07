@@ -656,5 +656,14 @@
     "image_file": "slide1_컨테이너_헬스체크_설정_안_하면_실무에서_벌어지는_일_20261107_033904.png",
     "post_id": "18139172437733280",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_______________________________20261107_033904.png"
+  },
+  {
+    "topic": "cron job 쓴다고 이력서에 썼는데 타임존 질문에 막힌 순간",
+    "hook": "cron 썼다고 적었는데 타임존이 뭐냐는",
+    "category": "면접 생존",
+    "published_at": "2026-11-07T13:06:02.990741+09:00",
+    "image_file": "slide1_cron_job_쓴다고_이력서에_썼는데_타임존_질문에_막힌_순간_20261107_130459.png",
+    "post_id": "17971991115177921",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_cron_job____________________________20261107_130459.png"
   }
 ]
