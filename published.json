@@ -674,5 +674,14 @@
     "image_file": "slide1_NAT_게이트웨이가_뭔지_모르고_VPC_구성했다고_쓴_결과_20261108_020752.png",
     "post_id": "17912943612302772",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_NAT_______________VPC____________20261108_020752.png"
+  },
+  {
+    "topic": "스왑 메모리로 버티는 서버가 실무에서 위험한 이유",
+    "hook": "서버가 살아있는데 왜 자꾸 느려지지? 스왑이 답 해줄 거야",
+    "category": "실무 갭",
+    "published_at": "2026-11-08T12:51:23.585055+09:00",
+    "image_file": "slide1_스왑_메모리로_버티는_서버가_실무에서_위험한_이유_20261108_125044.png",
+    "post_id": "17905002870369659",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_____________________________20261108_125044.png"
   }
 ]
