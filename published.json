@@ -683,5 +683,14 @@
     "image_file": "slide1_스왑_메모리로_버티는_서버가_실무에서_위험한_이유_20261108_125044.png",
     "post_id": "17905002870369659",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_____________________________20261108_125044.png"
+  },
+  {
+    "topic": "DNS TTL을 모르면 도메인 이전할 때 왜 당황하게 되나",
+    "hook": "도메인 바꿨는데 왜 아직도 옛날 서버로 가지?",
+    "category": "레벨업",
+    "published_at": "2026-11-09T02:22:23.605827+09:00",
+    "image_file": "slide1_DNS_TTL을_모르면_도메인_이전할_때_왜_당황하게_되나_20261109_022124.png",
+    "post_id": "18648036472034543",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_DNS_TTL__________________________20261109_022124.png"
   }
 ]
