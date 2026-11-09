@@ -701,5 +701,14 @@
     "image_file": "slide1_TCP와_UDP_차이__면접관이_꼭_후속_질문을_던지는_방식_20261109_130224.png",
     "post_id": "18107623757324862",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_TCP__UDP__________________________20261109_130224.png"
+  },
+  {
+    "topic": "포트 충돌 에러 해결 못 해서 면접 과제 제출 못 한 경우",
+    "hook": "과제는 다 만들었는데 포트 하나",
+    "category": "취준 실수",
+    "published_at": "2026-11-10T06:44:26.611100+09:00",
+    "image_file": "slide1_포트_충돌_에러_해결_못_해서_면접_과제_제출_못_한_경우_20261110_064254.png",
+    "post_id": "18044430989832506",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________________________________20261110_064254.png"
   }
 ]
