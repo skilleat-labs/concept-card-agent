@@ -692,5 +692,14 @@
     "image_file": "slide1_DNS_TTL을_모르면_도메인_이전할_때_왜_당황하게_되나_20261109_022124.png",
     "post_id": "18648036472034543",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_DNS_TTL__________________________20261109_022124.png"
+  },
+  {
+    "topic": "TCP와 UDP 차이, 면접관이 꼭 후속 질문을 던지는 방식",
+    "hook": "TCP UDP 차이 답했는데 면접관이 왜 웃었을까 그 이유 알려줌",
+    "category": "면접 생존",
+    "published_at": "2026-11-09T13:03:06.233742+09:00",
+    "image_file": "slide1_TCP와_UDP_차이__면접관이_꼭_후속_질문을_던지는_방식_20261109_130224.png",
+    "post_id": "18107623757324862",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_TCP__UDP__________________________20261109_130224.png"
   }
 ]
