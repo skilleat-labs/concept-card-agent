@@ -719,5 +719,14 @@
     "image_file": "slide1_API_응답_느리다는_이슈__어디서부터_뜯어봐야_하는지_모른다_20261110_143744.png",
     "post_id": "18030495674871288",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_API________________________________20261110_143744.png"
+  },
+  {
+    "topic": "리눅스 파일 권한 숫자 755·644 바로 읽히면 달라지는 것",
+    "hook": "755가 뭔지 모르면 서버 한 번 날려본다",
+    "category": "레벨업",
+    "published_at": "2026-11-11T04:02:02.178220+09:00",
+    "image_file": "slide1_리눅스_파일_권한_숫자_755_644_바로_읽히면_달라지는_것_20261111_040105.png",
+    "post_id": "18184164220425069",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1______________755_644_______________20261111_040105.png"
   }
 ]
