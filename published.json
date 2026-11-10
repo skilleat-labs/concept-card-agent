@@ -710,5 +710,14 @@
     "image_file": "slide1_포트_충돌_에러_해결_못_해서_면접_과제_제출_못_한_경우_20261110_064254.png",
     "post_id": "18044430989832506",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________________________________20261110_064254.png"
+  },
+  {
+    "topic": "API 응답 느리다는 이슈, 어디서부터 뜯어봐야 하는지 모른다",
+    "hook": "API 느리다는데 어디 봐야 할지 멍하니 화면만 봤다",
+    "category": "실무 갭",
+    "published_at": "2026-11-10T14:38:29.549156+09:00",
+    "image_file": "slide1_API_응답_느리다는_이슈__어디서부터_뜯어봐야_하는지_모른다_20261110_143744.png",
+    "post_id": "18030495674871288",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_API________________________________20261110_143744.png"
   }
 ]
