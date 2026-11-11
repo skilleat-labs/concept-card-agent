@@ -728,5 +728,14 @@
     "image_file": "slide1_리눅스_파일_권한_숫자_755_644_바로_읽히면_달라지는_것_20261111_040105.png",
     "post_id": "18184164220425069",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1______________755_644_______________20261111_040105.png"
+  },
+  {
+    "topic": "쿠버네티스 리소스 리밋 안 걸면 노드가 어떻게 되는지 아나요",
+    "hook": "리밋 없이",
+    "category": "면접 생존",
+    "published_at": "2026-11-11T13:09:13.779841+09:00",
+    "image_file": "slide1_쿠버네티스_리소스_리밋_안_걸면_노드가_어떻게_되는지_아나요_20261111_130744.png",
+    "post_id": "18405603274203671",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1___________________________________20261111_130744.png"
   }
 ]
