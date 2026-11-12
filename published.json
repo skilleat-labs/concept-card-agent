@@ -755,5 +755,14 @@
     "image_file": "slide1_데이터베이스_커넥션_풀_개념_모르고_배포했다가_터진_서버_20261112_141931.png",
     "post_id": "18167061550429450",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_________________________________20261112_141931.png"
+  },
+  {
+    "topic": "DDoS와 일반 트래픽 급증을 구분 못 하면 대응이 달라진다",
+    "hook": "트래픽이 폭증했다 DDoS야, 아니면 진짜 사용자야?",
+    "category": "레벨업",
+    "published_at": "2026-11-13T04:17:41.352262+09:00",
+    "image_file": "slide1_DDoS와_일반_트래픽_급증을_구분_못_하면_대응이_달라진다_20261113_041700.png",
+    "post_id": "18422314738083961",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_DDoS______________________________20261113_041700.png"
   }
 ]
