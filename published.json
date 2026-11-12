@@ -746,5 +746,14 @@
     "image_file": "slide1_pgp와_TLS가_같은_거라고_생각했던_보안_개념_혼동_정리_20261112_035827.png",
     "post_id": "18482451610112210",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_pgp__TLS__________________________20261112_035827.png"
+  },
+  {
+    "topic": "데이터베이스 커넥션 풀 개념 모르고 배포했다가 터진 서버",
+    "hook": "DB 연결이 왜 갑자기 터지는지 설명할 수 있어?",
+    "category": "실무 갭",
+    "published_at": "2026-11-12T14:20:15.298786+09:00",
+    "image_file": "slide1_데이터베이스_커넥션_풀_개념_모르고_배포했다가_터진_서버_20261112_141931.png",
+    "post_id": "18167061550429450",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_________________________________20261112_141931.png"
   }
 ]
