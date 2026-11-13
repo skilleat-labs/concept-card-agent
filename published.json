@@ -773,5 +773,14 @@
     "image_file": "slide1_서비스_메시가_왜_등장했는지_설명_못_하면_MSA_경험이_의심받는다_20261113_133421.png",
     "post_id": "18155669377553025",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_________________________MSA___________20261113_133421.png"
+  },
+  {
+    "topic": "VPN 없이 사무실 밖에서 사내 서버 접속하려다 막힌 경험",
+    "hook": "카페에서 사내",
+    "category": "취준 실수",
+    "published_at": "2026-11-14T03:55:38.304984+09:00",
+    "image_file": "slide1_VPN_없이_사무실_밖에서_사내_서버_접속하려다_막힌_경험_20261114_035405.png",
+    "post_id": "17877412392638076",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_VPN______________________________20261114_035405.png"
   }
 ]
