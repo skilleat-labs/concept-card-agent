@@ -791,5 +791,14 @@
     "image_file": "slide1_curl_명령어_하나로_API_테스트_못_하면_실무에서_느리다_20261114_132959.png",
     "post_id": "17871159084661641",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_curl_________API___________________20261114_132959.png"
+  },
+  {
+    "topic": "빌드 캐시 활용 못 하면 CI 파이프라인이 왜 느려지는지",
+    "hook": "빌드할 때마다 5분씩 기다리는 거 당연한 게 아니다",
+    "category": "레벨업",
+    "published_at": "2026-11-15T02:27:57.527083+09:00",
+    "image_file": "slide1_빌드_캐시_활용_못_하면_CI_파이프라인이_왜_느려지는지_20261115_022706.png",
+    "post_id": "18376791565210851",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_______________CI________________20261115_022706.png"
   }
 ]
