@@ -782,5 +782,14 @@
     "image_file": "slide1_VPN_없이_사무실_밖에서_사내_서버_접속하려다_막힌_경험_20261114_035405.png",
     "post_id": "17877412392638076",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_VPN______________________________20261114_035405.png"
+  },
+  {
+    "topic": "curl 명령어 하나로 API 테스트 못 하면 실무에서 느리다",
+    "hook": "curl 한 줄 못",
+    "category": "실무 갭",
+    "published_at": "2026-11-14T13:31:30.392019+09:00",
+    "image_file": "slide1_curl_명령어_하나로_API_테스트_못_하면_실무에서_느리다_20261114_132959.png",
+    "post_id": "17871159084661641",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_curl_________API___________________20261114_132959.png"
   }
 ]
