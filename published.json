@@ -809,5 +809,14 @@
     "image_file": "slide1_읽기_복제본을_왜_따로_두는지_DB_면접에서_설명할_수_있나_20261115_131636.png",
     "post_id": "18113379305350758",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________________DB_______________20261115_131636.png"
+  },
+  {
+    "topic": "오토스케일링 설정해 놨는데 왜 비용이 더 나왔는지 몰랐다",
+    "hook": "오토스케일링 켜놨더니 요금이 오히려 두 배가 됐다",
+    "category": "취준 실수",
+    "published_at": "2026-11-16T03:09:13.469911+09:00",
+    "image_file": "slide1_오토스케일링_설정해_놨는데_왜_비용이_더_나왔는지_몰랐다_20261116_030827.png",
+    "post_id": "18113083997236628",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_________________________________20261116_030827.png"
   }
 ]
