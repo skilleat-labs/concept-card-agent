@@ -800,5 +800,14 @@
     "image_file": "slide1_빌드_캐시_활용_못_하면_CI_파이프라인이_왜_느려지는지_20261115_022706.png",
     "post_id": "18376791565210851",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_______________CI________________20261115_022706.png"
+  },
+  {
+    "topic": "읽기 복제본을 왜 따로 두는지 DB 면접에서 설명할 수 있나",
+    "hook": "DB",
+    "category": "면접 생존",
+    "published_at": "2026-11-15T13:18:10.518822+09:00",
+    "image_file": "slide1_읽기_복제본을_왜_따로_두는지_DB_면접에서_설명할_수_있나_20261115_131636.png",
+    "post_id": "18113379305350758",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________________DB_______________20261115_131636.png"
   }
 ]
