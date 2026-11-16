@@ -818,5 +818,14 @@
     "image_file": "slide1_오토스케일링_설정해_놨는데_왜_비용이_더_나왔는지_몰랐다_20261116_030827.png",
     "post_id": "18113083997236628",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_________________________________20261116_030827.png"
+  },
+  {
+    "topic": "롤백 명령어 모르고 잘못된 배포 그냥 둔 첫 경험",
+    "hook": "배포",
+    "category": "실무 갭",
+    "published_at": "2026-11-16T13:18:20.623733+09:00",
+    "image_file": "slide1_롤백_명령어_모르고_잘못된_배포_그냥_둔_첫_경험_20261116_131647.png",
+    "post_id": "18065812394532687",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_____________________________20261116_131647.png"
   }
 ]
