@@ -827,5 +827,14 @@
     "image_file": "slide1_롤백_명령어_모르고_잘못된_배포_그냥_둔_첫_경험_20261116_131647.png",
     "post_id": "18065812394532687",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_____________________________20261116_131647.png"
+  },
+  {
+    "topic": "OOM Killer가 뭔지 모르면 프로세스가 죽는 이유를 모른다",
+    "hook": "프로세스가 갑자기 죽었다 근데",
+    "category": "레벨업",
+    "published_at": "2026-11-17T06:24:50.976305+09:00",
+    "image_file": "slide1_OOM_Killer가_뭔지_모르면_프로세스가_죽는_이유를_모른다_20261117_062334.png",
+    "post_id": "18499214296110942",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_OOM_Killer__________________________20261117_062334.png"
   }
 ]
