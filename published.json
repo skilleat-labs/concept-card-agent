@@ -836,5 +836,14 @@
     "image_file": "slide1_OOM_Killer가_뭔지_모르면_프로세스가_죽는_이유를_모른다_20261117_062334.png",
     "post_id": "18499214296110942",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_OOM_Killer__________________________20261117_062334.png"
+  },
+  {
+    "topic": "리버스 프록시가 뭔지 모르면 Nginx 설정 건드리다 서비스 날린다",
+    "hook": "Nginx 설정 한 줄 바꿨다가 전체 서비스 날려본 적 있어?",
+    "category": "면접 생존",
+    "published_at": "2026-11-17T15:01:41.957059+09:00",
+    "image_file": "slide1_리버스_프록시가_뭔지_모르면_Nginx_설정_건드리다_서비스_날린다_20261117_150058.png",
+    "post_id": "18134719780805868",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_________________Nginx_________________20261117_150058.png"
   }
 ]
