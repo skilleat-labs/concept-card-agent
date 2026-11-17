@@ -845,5 +845,14 @@
     "image_file": "slide1_리버스_프록시가_뭔지_모르면_Nginx_설정_건드리다_서비스_날린다_20261117_150058.png",
     "post_id": "18134719780805868",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_________________Nginx_________________20261117_150058.png"
+  },
+  {
+    "topic": "브랜치 전략 없이 협업하다 충돌 수습 못 한 사이드 프로젝트 후기",
+    "hook": "main에 다 같이 push했다가 프로젝트 통째로 날린 날",
+    "category": "취준 실수",
+    "published_at": "2026-11-18T05:11:41.719455+09:00",
+    "image_file": "slide1_브랜치_전략_없이_협업하다_충돌_수습_못_한_사이드_프로젝트_후기_20261118_051053.png",
+    "post_id": "18129048278475096",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1______________________________________20261118_051053.png"
   }
 ]
