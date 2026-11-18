@@ -863,5 +863,14 @@
     "image_file": "slide1_소켓_타임아웃과_커넥션_타임아웃_차이_모르고_에러_원인_못_찾은_경험_20261118_143024.png",
     "post_id": "18026335730719613",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1________________________________________20261118_143024.png"
+  },
+  {
+    "topic": "파드 개수는 늘었는데 왜 응답이 안 빨라지는지 설명할 수 있나",
+    "hook": "파드 늘렸는데 왜 아직도 느리냐고?",
+    "category": "레벨업",
+    "published_at": "2026-11-19T04:43:38.644777+09:00",
+    "image_file": "slide1_파드_개수는_늘었는데_왜_응답이_안_빨라지는지_설명할_수_있나_20261119_044243.png",
+    "post_id": "17895143496447107",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____________________________________20261119_044243.png"
   }
 ]
