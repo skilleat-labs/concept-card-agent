@@ -854,5 +854,14 @@
     "image_file": "slide1_브랜치_전략_없이_협업하다_충돌_수습_못_한_사이드_프로젝트_후기_20261118_051053.png",
     "post_id": "18129048278475096",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1______________________________________20261118_051053.png"
+  },
+  {
+    "topic": "소켓 타임아웃과 커넥션 타임아웃 차이 모르고 에러 원인 못 찾은 경험",
+    "hook": "타임아웃 에러 떴는데 원인을 모르겠는 그 답답함 알아?",
+    "category": "실무 갭",
+    "published_at": "2026-11-18T14:31:11.278793+09:00",
+    "image_file": "slide1_소켓_타임아웃과_커넥션_타임아웃_차이_모르고_에러_원인_못_찾은_경험_20261118_143024.png",
+    "post_id": "18026335730719613",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1________________________________________20261118_143024.png"
   }
 ]
