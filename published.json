@@ -872,5 +872,14 @@
     "image_file": "slide1_파드_개수는_늘었는데_왜_응답이_안_빨라지는지_설명할_수_있나_20261119_044243.png",
     "post_id": "17895143496447107",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____________________________________20261119_044243.png"
+  },
+  {
+    "topic": "JWT 토큰 만료 처리 없이 배포했다가 보안 질문에 말문 막힌 순간",
+    "hook": "JWT 그냥 발급하면 끝인 줄 알았는데 면접에서 다 털렸다",
+    "category": "면접 생존",
+    "published_at": "2026-11-19T14:29:32.326964+09:00",
+    "image_file": "slide1_JWT_토큰_만료_처리_없이_배포했다가_보안_질문에_말문_막힌_순간_20261119_142847.png",
+    "post_id": "18112500893631610",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_JWT___________________________________20261119_142847.png"
   }
 ]
