@@ -899,5 +899,14 @@
     "image_file": "slide1_컨테이너_로그_stdout으로_안_뽑으면_운영에서_왜_문제가_되나_20261120_141550.png",
     "post_id": "18144307912619447",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_________stdout_______________________20261120_141550.png"
+  },
+  {
+    "topic": "ARN이 뭔지 모르면 IAM 정책 작성할 때 복붙만 하게 된다",
+    "hook": "IAM 정책 복붙하고 왜 되는지 모른다면 ARN부터 보자",
+    "category": "레벨업",
+    "published_at": "2026-11-21T04:23:13.310380+09:00",
+    "image_file": "slide1_ARN이_뭔지_모르면_IAM_정책_작성할_때_복붙만_하게_된다_20261121_042228.png",
+    "post_id": "18172334431465263",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_ARN_________IAM____________________20261121_042228.png"
   }
 ]
