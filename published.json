@@ -890,5 +890,14 @@
     "image_file": "slide1_인그레스_컨트롤러_없이_쿠버네티스_외부_트래픽_연결하려다_막힌_경험_20261120_044326.png",
     "post_id": "18140004445646490",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_______________________________________20261120_044326.png"
+  },
+  {
+    "topic": "컨테이너 로그 stdout으로 안 뽑으면 운영에서 왜 문제가 되나",
+    "hook": "컨테이너 로그를 파일에 쌓았다가 다 날아간 얘기",
+    "category": "실무 갭",
+    "published_at": "2026-11-20T14:16:34.257405+09:00",
+    "image_file": "slide1_컨테이너_로그_stdout으로_안_뽑으면_운영에서_왜_문제가_되나_20261120_141550.png",
+    "post_id": "18144307912619447",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_________stdout_______________________20261120_141550.png"
   }
 ]
