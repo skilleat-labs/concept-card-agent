@@ -908,5 +908,14 @@
     "image_file": "slide1_ARN이_뭔지_모르면_IAM_정책_작성할_때_복붙만_하게_된다_20261121_042228.png",
     "post_id": "18172334431465263",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_ARN_________IAM____________________20261121_042228.png"
+  },
+  {
+    "topic": "시스템 콜이 뭔지 모르면 커널과 컨테이너 격리 질문에서 무너진다",
+    "hook": "컨테이너 격리 설명하다 시스템 콜 모른다는",
+    "category": "면접 생존",
+    "published_at": "2026-11-21T14:09:29.166857+09:00",
+    "image_file": "slide1_시스템_콜이_뭔지_모르면_커널과_컨테이너_격리_질문에서_무너진다_20261121_140815.png",
+    "post_id": "18056552585813351",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_____________________________________20261121_140815.png"
   }
 ]
