@@ -917,5 +917,14 @@
     "image_file": "slide1_시스템_콜이_뭔지_모르면_커널과_컨테이너_격리_질문에서_무너진다_20261121_140815.png",
     "post_id": "18056552585813351",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_____________________________________20261121_140815.png"
+  },
+  {
+    "topic": "rate limiting 모르면 외부 API 연동 과제에서 왜 차단당하는지 모른다",
+    "hook": "API 과제 제출했는데 왜 자꾸 차단되는지 이유도 몰랐다",
+    "category": "취준 실수",
+    "published_at": "2026-11-22T03:25:51.865959+09:00",
+    "image_file": "slide1_rate_limiting_모르면_외부_API_연동_과제에서_왜_차단당하는지_모른다_20261122_032510.png",
+    "post_id": "18025540502933155",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_rate_limiting________API______________________20261122_032510.png"
   }
 ]
