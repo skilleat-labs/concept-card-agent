@@ -926,5 +926,14 @@
     "image_file": "slide1_rate_limiting_모르면_외부_API_연동_과제에서_왜_차단당하는지_모른다_20261122_032510.png",
     "post_id": "18025540502933155",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_rate_limiting________API______________________20261122_032510.png"
+  },
+  {
+    "topic": "볼륨 마운트 없이 컨테이너 재시작하면 데이터가 왜 사라지는지 몰랐다",
+    "hook": "컨테이너 껐다 켰더니 데이터가 통째로 사라졌다",
+    "category": "실무 갭",
+    "published_at": "2026-11-22T13:34:49.568574+09:00",
+    "image_file": "slide1_볼륨_마운트_없이_컨테이너_재시작하면_데이터가_왜_사라지는지_몰랐다_20261122_133357.png",
+    "post_id": "18111218711362794",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_______________________________________20261122_133357.png"
   }
 ]
