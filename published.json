@@ -935,5 +935,14 @@
     "image_file": "slide1_볼륨_마운트_없이_컨테이너_재시작하면_데이터가_왜_사라지는지_몰랐다_20261122_133357.png",
     "post_id": "18111218711362794",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_______________________________________20261122_133357.png"
+  },
+  {
+    "topic": "레이턴시와 처리량을 헷갈리면 성능 개선 방향 자체가 틀린다",
+    "hook": "응답이 느리다고 서버 늘렸는데 왜 더 느려지지?",
+    "category": "레벨업",
+    "published_at": "2026-11-23T14:11:27.548384+09:00",
+    "image_file": "slide1_레이턴시와_처리량을_헷갈리면_성능_개선_방향_자체가_틀린다_20261123_141041.png",
+    "post_id": "17914398114576239",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________________________________20261123_141041.png"
   }
 ]
