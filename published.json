@@ -944,5 +944,14 @@
     "image_file": "slide1_레이턴시와_처리량을_헷갈리면_성능_개선_방향_자체가_틀린다_20261123_141041.png",
     "post_id": "17914398114576239",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1__________________________________20261123_141041.png"
+  },
+  {
+    "topic": "AWS 보안 그룹과 NACL 차이 헷갈리면 왜 포트가 막히는지 못 찾는다",
+    "hook": "포트 막혔는데 보안그룹만 뒤졌다가 30분",
+    "category": "면접 생존",
+    "published_at": "2026-11-24T08:02:00.530699+09:00",
+    "image_file": "slide1_AWS_보안_그룹과_NACL_차이_헷갈리면_왜_포트가_막히는지_못_찾는다_20261124_080048.png",
+    "post_id": "18151071424600680",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_AWS________NACL__________________________20261124_080048.png"
   }
 ]
