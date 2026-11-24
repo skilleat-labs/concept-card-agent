@@ -953,5 +953,14 @@
     "image_file": "slide1_AWS_보안_그룹과_NACL_차이_헷갈리면_왜_포트가_막히는지_못_찾는다_20261124_080048.png",
     "post_id": "18151071424600680",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_AWS________NACL__________________________20261124_080048.png"
+  },
+  {
+    "topic": "서버 CPU 사용률 100%인데 어디서 뭘 봐야 하는지 아무도 안 가르쳐줬다",
+    "hook": "CPU 100%뜨면 뭘 봐야 하는지 아무도 안 알려줬다",
+    "category": "실무 갭",
+    "published_at": "2026-11-24T16:56:21.772567+09:00",
+    "image_file": "slide1_서버_CPU_사용률_100_인데_어디서_뭘_봐야_하는지_아무도_안_가르쳐줬다_20261124_165539.png",
+    "post_id": "18038496539849399",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____CPU_____100_____________________________20261124_165539.png"
   }
 ]
