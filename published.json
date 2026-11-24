@@ -962,5 +962,14 @@
     "image_file": "slide1_서버_CPU_사용률_100_인데_어디서_뭘_봐야_하는지_아무도_안_가르쳐줬다_20261124_165539.png",
     "post_id": "18038496539849399",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1____CPU_____100_____________________________20261124_165539.png"
+  },
+  {
+    "topic": "시크릿 로테이션이 뭔지 모르면 자격증명 유출 대응 질문에서 끝난다",
+    "hook": "자격증명 유출됐을 때 뭐부터 할 거냐고 물어보는 이유가 있다",
+    "category": "레벨업",
+    "published_at": "2026-11-25T06:41:00.571007+09:00",
+    "image_file": "slide1_시크릿_로테이션이_뭔지_모르면_자격증명_유출_대응_질문에서_끝난다_20261125_064021.png",
+    "post_id": "17972241402199410",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1______________________________________20261125_064021.png"
   }
 ]
