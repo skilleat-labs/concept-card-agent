@@ -980,5 +980,14 @@
     "image_file": "slide1_에러_코드_500과_503_차이를_설명_못_하면_장애_원인_분류가_안_된다_20261125_152931.png",
     "post_id": "18111543623235258",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_______500__503____________________________20261125_152931.png"
+  },
+  {
+    "topic": "패키지 버전 고정 안 하면 CI에서 어제 되던 빌드가 오늘 깨진다",
+    "hook": "어제 됐던 빌드가 오늘 갑자기",
+    "category": "실무 갭",
+    "published_at": "2026-11-26T05:49:57.061814+09:00",
+    "image_file": "slide1_패키지_버전_고정_안_하면_CI에서_어제_되던_빌드가_오늘_깨진다_20261126_054825.png",
+    "post_id": "18191742283411246",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1________________CI____________________20261126_054825.png"
   }
 ]
