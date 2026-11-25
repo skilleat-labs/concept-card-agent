@@ -971,5 +971,14 @@
     "image_file": "slide1_시크릿_로테이션이_뭔지_모르면_자격증명_유출_대응_질문에서_끝난다_20261125_064021.png",
     "post_id": "17972241402199410",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1______________________________________20261125_064021.png"
+  },
+  {
+    "topic": "에러 코드 500과 503 차이를 설명 못 하면 장애 원인 분류가 안 된다",
+    "hook": "500 뜨면 서버 문제, 503 뜨면 뭐가",
+    "category": "면접 생존",
+    "published_at": "2026-11-25T15:30:40.860055+09:00",
+    "image_file": "slide1_에러_코드_500과_503_차이를_설명_못_하면_장애_원인_분류가_안_된다_20261125_152931.png",
+    "post_id": "18111543623235258",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_______500__503____________________________20261125_152931.png"
   }
 ]
