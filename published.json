@@ -998,5 +998,14 @@
     "image_file": "slide1_configmap과_secret을_왜_따로_나누는지_모르면_쿠버네티스_설계가_흔들린다_20261126_152159.png",
     "post_id": "18135598630705363",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_configmap__secret_______________________________20261126_152159.png"
+  },
+  {
+    "topic": "프로세스 좀비 상태가 뭔지 모르면 리눅스 운영 경험을 의심받는다",
+    "hook": "좀비 프로세스 설명 못 하면 리눅스 써봤다는 말 믿기 어렵다",
+    "category": "면접 생존",
+    "published_at": "2026-11-27T05:41:20.848845+09:00",
+    "image_file": "slide1_프로세스_좀비_상태가_뭔지_모르면_리눅스_운영_경험을_의심받는다_20261127_054029.png",
+    "post_id": "18428321956156084",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_____________________________________20261127_054029.png"
   }
 ]
