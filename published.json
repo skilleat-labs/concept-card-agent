@@ -989,5 +989,14 @@
     "image_file": "slide1_패키지_버전_고정_안_하면_CI에서_어제_되던_빌드가_오늘_깨진다_20261126_054825.png",
     "post_id": "18191742283411246",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1________________CI____________________20261126_054825.png"
+  },
+  {
+    "topic": "configmap과 secret을 왜 따로 나누는지 모르면 쿠버네티스 설계가 흔들린다",
+    "hook": "ConfigMap이랑 Secret 그냥 둘 다 환경변수 아닌가요?",
+    "category": "레벨업",
+    "published_at": "2026-11-26T15:22:46.071573+09:00",
+    "image_file": "slide1_configmap과_secret을_왜_따로_나누는지_모르면_쿠버네티스_설계가_흔들린다_20261126_152159.png",
+    "post_id": "18135598630705363",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_configmap__secret_______________________________20261126_152159.png"
   }
 ]
