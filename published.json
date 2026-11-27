@@ -1007,5 +1007,14 @@
     "image_file": "slide1_프로세스_좀비_상태가_뭔지_모르면_리눅스_운영_경험을_의심받는다_20261127_054029.png",
     "post_id": "18428321956156084",
     "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_____________________________________20261127_054029.png"
+  },
+  {
+    "topic": "graceful shutdown 모르고 배포하면 진행 중인 요청이 어떻게 되나",
+    "hook": "배포했는데 갑자기 결제가 씹혔다고?",
+    "category": "실무 갭",
+    "published_at": "2026-11-27T15:12:57.349739+09:00",
+    "image_file": "slide1_graceful_shutdown_모르고_배포하면_진행_중인_요청이_어떻게_되나_20261127_151204.png",
+    "post_id": "18404096764201613",
+    "image_url": "https://conceptcard.blob.core.windows.net/concept-cards/cards/slide1_graceful_shutdown___________________________20261127_151204.png"
   }
 ]
